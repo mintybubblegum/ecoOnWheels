@@ -41,6 +41,7 @@ return new class extends Migration
             $table->boolean('topJourneys');
             $table->string('userEmail');
 
+            
             $table->timestamps();
         });
     }
