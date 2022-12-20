@@ -84,6 +84,7 @@ class TripController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Trip::destroy($id);
+        return redirect()->route('home');
     }
 }

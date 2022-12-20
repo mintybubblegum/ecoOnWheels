@@ -13,27 +13,14 @@
                 <h5 class="card-title text-warning"> {{ $trip->price }} € </h5>
                 <h5 class="card-title text-warning"> {{ $trip->energyType }} </h5>
             </div>
+            <form action="{{ route('deleteTrip', ['id'=>$trip->id]) }}" method="POST">
+                @method('delete')
+                @csrf
+
+                <button type="submit" onclick="return confirm ('Are you sure you want to delete this trip? {{ $trip->destinationCity }} - ID {{ $trip->id }}' )">🗑</button>
+            </form>
         </div>
     @endforeach
 </div>
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 @endsection
