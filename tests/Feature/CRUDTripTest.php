@@ -42,5 +42,32 @@ class CRUDTripTest extends TestCase
         $this->assertCount(0, Trip::all());
     }
 
-
+    public function test_aTripCanBeCreated(){
+        $this->withExceptionHandling();
+        $response = $this->post(route ('storeTrip'),
+        [
+            'imgDestination' => 'imgDestination',
+            'originAddress' => 'originAddress',
+            'originPostcode' => 'originPostcode',
+            'originCity' => 'originCity',
+            'originCountry' => 'originCountry',
+            'destinationAddress' => 'destinationAddress',
+            'destinationPostcode' => 'destinationPostcode',
+            'destinationCity' => 'destinationCity',
+            'destinationCountry' => 'destinationCountry',
+            'preferences' => 'preferences',
+            'seats' => '3',
+            'price' => '15',
+            'driverName' => 'driverName',
+            'driverSurname' => 'driverSurname',
+            'driverImg' => 'driverImg',
+            'energyType' => 'energyType',
+            'vehicleType' => 'vehicleType',
+            'date' => '2022-12-23',
+            'departureTime' => 'departureTime',
+            'arrivalTime' => 'arrivalTime',
+            'topJourneys' => 'topJourneys',
+        ]);
+        $this->assertCount(1,Trip::all());
+    }
 }

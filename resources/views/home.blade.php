@@ -2,6 +2,12 @@
 
 @section('content')
 
+<div>
+    <button>
+        <a href="{{route('createTrip')}}">Create New Trip</a>
+    </button>
+</div>
+
 <div class="d-flex flex-wrap row justify-content-center my-4">
     @foreach ($trips as $trip)
         <div class="card" style="width: 18rem;">
@@ -17,7 +23,7 @@
                 @method('delete')
                 @csrf
 
-                <button type="submit" onclick="return confirm ('Are you sure you want to delete this trip? {{ $trip->destinationCity }} - ID {{ $trip->id }}' )">🗑</button>
+                <button type="submit" onclick="return confirm ('Are you sure you want to delete this trip to {{ $trip->destinationCity }}?')">🗑</button>
             </form>
         </div>
     @endforeach

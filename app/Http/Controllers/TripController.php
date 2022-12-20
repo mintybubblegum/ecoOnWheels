@@ -28,7 +28,7 @@ class TripController extends Controller
      */
     public function create()
     {
-        //
+        return view('createTrip');
     }
 
     /**
@@ -39,7 +39,10 @@ class TripController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $trip = request()->except('_token');
+        Trip::create($trip);
+
+        return redirect()->route('home');
     }
 
     /**
