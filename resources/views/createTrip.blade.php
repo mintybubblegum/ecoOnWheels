@@ -24,7 +24,7 @@
                 <div class="buttons">
                     <button type ="submit" value="create" class="btn btn-primary">Create</button>
                     <button type="reset" value="reset" class="btn btn-primary">Reset</button>
-                    <a href="{{route ('home')}}"><button class="btn btn-primary">Return</button></a>
+                    <a href="{{route('home')}}"><button class="btn btn-primary">Return</button></a>
                 </div>
     </form>
     </div>
