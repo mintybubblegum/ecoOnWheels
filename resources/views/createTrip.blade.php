@@ -3,8 +3,7 @@
 @section('content')
 
 <div>
-    <form class="row g-3" action="?action=store" method="post">
-        @method('create')
+    <form class="row g-3" action="{{route ('storeTrip')}}" method="post">
         @csrf
         <div class="col-md-6">
             <label class="form-label">Origin City</label>
@@ -25,7 +24,7 @@
                 <div class="buttons">
                     <button type ="submit" value="create" class="btn btn-primary">Create</button>
                     <button type="reset" value="reset" class="btn btn-primary">Reset</button>
-                    <a href="./index.php"><button class="btn btn-primary">Return</button></a>
+                    <a href="{{route ('home')}}"><button class="btn btn-primary">Return</button></a>
                 </div>
     </form>
     </div>
