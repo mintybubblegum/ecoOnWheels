@@ -68,6 +68,6 @@ class CRUDTripTest extends TestCase
             'arrivalTime' => 'arrivalTime',
             'topJourneys' => 'topJourneys',
         ]);
-        $this->assertCount(1,Trip::all());
+        $this->assertCount(1,Trip::all()); 
     }
 }
