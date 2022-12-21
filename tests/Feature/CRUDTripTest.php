@@ -66,7 +66,7 @@ class CRUDTripTest extends TestCase
             'date' => '2022-12-23',
             'departureTime' => 'departureTime',
             'arrivalTime' => 'arrivalTime',
-            'topJourneys' => 'topJourneys',
+            'topJourneys' => 'topJourneys'
         ]);
         $this->assertCount(1,Trip::all());
     }
