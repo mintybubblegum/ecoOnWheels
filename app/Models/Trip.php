@@ -24,13 +24,16 @@ class Trip extends Model
         'price',
         'driverName',
         'driverSurname',
+        'driverPhone',
         'driverImg',
         'energyType',
+        'numberplate',
         'vehicleType',
         'date',
         'departureTime',
         'arrivalTime',
         'topJourneys',
+        'userEmail'
 ];
 
 }
