@@ -27,3 +27,5 @@ Route::delete('/delete/{id}', [TripController::class, 'destroy'])->name('deleteT
 //C del CRUD
 Route::get('/create', [TripController::class, 'create'])->name('createTrip');
 Route::post('/', [TripController::class, 'store'])->name('storeTrip');
+
+//U del CRUD

@@ -60,13 +60,16 @@ class CRUDTripTest extends TestCase
             'price' => '15',
             'driverName' => 'driverName',
             'driverSurname' => 'driverSurname',
+            'driverPhone' => 'driverPhone',
             'driverImg' => 'driverImg',
             'energyType' => 'energyType',
+            'numberplate' => 'numberplate',
             'vehicleType' => 'vehicleType',
             'date' => '2022-12-23',
             'departureTime' => 'departureTime',
             'arrivalTime' => 'arrivalTime',
-            'topJourneys' => 'topJourneys'
+            'topJourneys' => 'topJourneys',
+            'userEmail' => 'userEmail'
         ]);
         $this->assertCount(1,Trip::all());
     }

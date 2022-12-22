@@ -95,7 +95,7 @@
         </div>
         <div class="col-md-6">
             <label class="form-label">Top Journeys </label>
-            <input type="text" class="form-control" name="topJourneys" value="featuredTrip">
+            <input type="text" class="form-control" name="topJourneys">
         </div>
         <div class="col-md-6">
             <label class="form-label">User email</label>
@@ -104,7 +104,7 @@
         <div class="buttons">
             <a href="{{route('home')}}"><button type ="submit" value="create" class="btn btn-primary">Create</button></a>
             <button type="reset" value="reset" class="btn btn-primary">Reset</button>
-            <a href="{{route('home')}}"><button class="btn btn-primary">Return</button></a>
+            <a href="{{route('home')}}"><button type="button" class="btn btn-primary">Return</button></a>
         </div>
         
     </form>
