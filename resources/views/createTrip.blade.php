@@ -106,7 +106,6 @@
             <button type="reset" value="reset" class="btn btn-primary">Reset</button>
             <a href="{{route('home')}}"><button type="button" class="btn btn-primary">Return</button></a>
         </div>
-        
     </form>
     </div>
 @endsection
