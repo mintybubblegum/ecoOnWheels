@@ -64,7 +64,8 @@ class TripController extends Controller
      */
     public function edit($id)
     {
-        //
+        $trip=Trip::find($id);
+        return view('editTrip', compact('trip'));
     }
 
     /**
@@ -76,7 +77,9 @@ class TripController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $trip=request()->except('_token','_method');
+        Trip::where('id', $id)->update($trip);
+        return redirect()->route('home');
     }
 
     /**

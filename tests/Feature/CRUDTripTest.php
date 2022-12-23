@@ -7,6 +7,7 @@ use App\Models\Trip;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
+use function PHPUnit\Framework\assertCount;
 
 class CRUDTripTest extends TestCase
 {
@@ -72,5 +73,13 @@ class CRUDTripTest extends TestCase
             'userEmail' => 'userEmail'
         ]);
         $this->assertCount(1,Trip::all()); 
+    }
+
+    public function test_aTripCanBeUpdated(){
+        $this->withExceptionHandling();
+        $trip=Trip::factory()->create();
+        $this->assertCount(1,Trip::all());
+        $response=$this->patch(route('updateTrip',$trip->id), ['destinationCity'=>'New DestinationCity']);
+        $this->assertEquals('New DestinationCity', Trip::first()->destinationCity);
     }
 }

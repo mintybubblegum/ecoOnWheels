@@ -23,6 +23,7 @@
                 @method('delete')
                 @csrf
 
+                <a href="{{route ('editTrip',['id'=>$trip->id])}}">✏</a>
                 <button type="submit" onclick="return confirm ('Are you sure you want to delete this trip to {{ $trip->destinationCity }}?')">🗑</button>
             </form>
         </div>
