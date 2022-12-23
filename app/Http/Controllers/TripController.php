@@ -53,7 +53,8 @@ class TripController extends Controller
      */
     public function show($id)
     {
-        //
+        $trip=Trip::find($id);
+        return view('showTrip', compact('trip'));
     }
 
     /**

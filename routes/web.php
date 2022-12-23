@@ -31,3 +31,5 @@ Route::post('/', [TripController::class, 'store'])->name('storeTrip');
 //U del CRUD
 Route::get('/edit/{id}', [TripController::class, 'edit'])->name('editTrip');
 Route::patch('/trip/{id}', [TripController::class, 'update'])->name('updateTrip');
+
+Route::get('/show/{id}', [TripController::class, 'show'])->name('showTrip');
