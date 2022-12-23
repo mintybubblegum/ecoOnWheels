@@ -82,4 +82,14 @@ class CRUDTripTest extends TestCase
         $response=$this->patch(route('updateTrip',$trip->id), ['destinationCity'=>'New DestinationCity']);
         $this->assertEquals('New DestinationCity', Trip::first()->destinationCity);
     }
+
+    public function test_aTripCanBeShowed(){
+        $this->withExceptionHandling();
+        $trip=Trip::factory()->create();
+        $this->assertCount(1,Trip::all());
+        $response=$this->get(route('showTrip', $trip->id));
+        $response->assertSee($trip->name);
+        $response->assertStatus(200)->assertViewIs('showTrip');
+    }
+
 }
