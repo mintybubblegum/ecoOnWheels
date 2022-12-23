@@ -34,6 +34,5 @@ class Trip extends Model
         'arrivalTime',
         'topJourneys',
         'userEmail'
-];
-
+    ];
 }
