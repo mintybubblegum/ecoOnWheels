@@ -11,6 +11,23 @@ main {
     align-items: center;
 }
 
+a{
+    text-decoration: none!important;
+    color: white!important;
+}
+
+.card{
+    margin:5px;
+    background-color: #8C9E88;
+}
+
+.card-title {
+    color:#162723;
+}
+
+.price {
+    font-weight: bolder;
+}
 
 form {
     width:320px;
@@ -19,6 +36,10 @@ form {
 	margin:auto;
 	background-color:#8C9E88;
     color: #162723;
+}
+
+.formActions{
+    background-color: transparent;
 }
 
 .formstyle {
