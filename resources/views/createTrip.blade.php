@@ -2,110 +2,114 @@
 
 @section('content')
 
-<div>
-    <form class="row g-3" action="{{route ('storeTrip')}}" method="post">
+
+    <form action="{{route ('storeTrip')}}" method="post">
         @csrf
-        <div class="col-md-6">
-            <label class="form-label">Destination Image</label>
-            <input type="text" class="form-control"  name="imgDestination">
-        </div>
-        <div class="col-md-6">
+        <h3>Trip details</h3>
+        <div>
             <label class="form-label">Origin Address</label>
-            <input type="text" class="form-control" name="originAddress">
+            <input type="text" class="formControl" name="originAddress">
         </div>
-        <div class="col-md-6">
+        <div>
             <label class="form-label">Origin Postcode</label>
-            <input type="text" class="form-control" name="originPostcode">
+            <input type="text" class="formControl" name="originPostcode">
         </div>
-        <div class="col-md-6">
+        <div>
             <label class="form-label">Origin City</label>
-            <input type="text" class="form-control" name="originCity">
+            <input type="text" class="formControl" name="originCity">
         </div>
-        <div class="col-md-6">
+        <div>
             <label class="form-label">Origin Country</label>
-            <input type="text" class="form-control" name="originCountry">
+            <input type="text" class="formControl" name="originCountry">
         </div>
-        <div class="col-md-6">
-            <label class="form-label">Destination Address</label>
-            <input type="text" class="form-control" name="destinationAddress">
-        </div>
-        <div class="col-md-6">
-            <label class="form-label">Destination Postcode</label>
-            <input type="text" class="form-control" name="destinationPostcode">
-        </div>
-        <div class="col-md-6">
-            <label class="form-label">Destination City</label>
-            <input type="text" class="form-control" name="destinationCity">
-        </div>
-        <div class="col-md-6">
-            <label class="form-label">Destination Country</label>
-            <input type="text" class="form-control" name="destinationCountry">
-        </div>
-        <div class="col-md-6">
-            <label class="form-label">Preferences</label>
-            <textarea class="form-control" name="preferences"></textarea>
-        </div>
-        <div class="col-md-6">
-            <label class="form-label">Seats</label>
-            <input type="number" class="form-control" name="seats">
-        </div>
-        <div class="col-md-6">
-            <label class="form-label">Price</label>
-            <input type="number" step=0.01 class="form-control" name="price">
-        </div>
-        <div class="col-md-6">
-            <label class="form-label">Driver name</label>
-            <input type="text" class="form-control" name="driverName">
-        </div>
-        <div class="col-md-6">
-            <label class="form-label">Driver surname</label>
-            <input type="text" class="form-control" name="driverSurname">
-        </div>
-        <div class="col-md-6">
-            <label class="form-label">Driver number phone</label>
-            <input type="text" class="form-control" name="driverPhone">
-        </div>
-        <div class="col-md-6">
-            <label class="form-label">Driver Image</label>
-            <input type="text" class="form-control"  name="driverImg">
-        </div>
-        <div class="col-md-6">
-            <label class="form-label">Energy type</label>
-            <input type="text" class="form-control" name="energyType">
-        </div>
-        <div class="col-md-6">
-            <label class="form-label">Vehicle number plate</label>
-            <input type="text" class="form-control" name="numberplate">
-        </div>
-        <div class="col-md-6">
-            <label class="form-label">Vehicle type</label>
-            <input type="text" class="form-control" name="vehicleType">
-        </div>
-        <div class="col-md-6">
+        <div>
             <label class="form-label">Date</label>
-            <input type="date" class="form-control" name="date">
+            <input type="date" class="formControl" name="date">
         </div>
-        <div class="col-md-6">
+        <div>
             <label class="form-label">Departure Time</label>
-            <input type="time" class="form-control" name="departureTime">
+            <input type="time" class="formControl" name="departureTime">
         </div>
-        <div class="col-md-6">
+        <div>
+            <label class="form-label">Destination Image</label>
+            <input type="text" class="formControl"  name="imgDestination">
+        </div>
+        <div>
+            <label class="form-label">Destination Address</label>
+            <input type="text" class="formControl" name="destinationAddress">
+        </div>
+        <div>
+            <label class="form-label">Destination Postcode</label>
+            <input type="text" class="formControl" name="destinationPostcode">
+        </div>
+        <div>
+            <label class="form-label">Destination City</label>
+            <input type="text" class="formControl" name="destinationCity">
+        </div>
+        <div>
+            <label class="form-label">Destination Country</label>
+            <input type="text" class="formControl" name="destinationCountry">
+        </div>
+        <div>
             <label class="form-label">Arrival Time</label>
-            <input type="time" class="form-control" name="arrivalTime">
+            <input type="time" class="formControl" name="arrivalTime">
         </div>
-        <div class="col-md-6">
+        <div>
+            <label class="form-label">Preferences</label>
+            <textarea class="formControl" name="preferences"></textarea>
+        </div>
+        <div>
+            <label class="form-label">Seats</label>
+            <input type="number" class="formControl" name="seats">
+        </div>
+        <div>
+            <label class="form-label">Price</label>
+            <input type="number" step=0.01 class="formControl" name="price">
+        </div>
+        <h3>Driver data</h3>
+        <div>
+            <label class="form-label">Driver name</label>
+            <input type="text" class="formControl" name="driverName">
+        </div>
+        <div>
+            <label class="form-label">Driver surname</label>
+            <input type="text" class="formControl" name="driverSurname">
+        </div>
+        <div>
+            <label class="form-label">Driver number phone</label>
+            <input type="text" class="formControl" name="driverPhone">
+        </div>
+        <div>
+            <label class="form-label">Driver Image</label>
+            <input type="text" class="formControl"  name="driverImg">
+        </div>
+        <h3>Vehicle data</h3>
+        <div>
+            <label class="form-label">Energy type</label>
+            <input type="text" class="formControl" name="energyType">
+        </div>
+        <div>
+            <label class="form-label">Vehicle number plate</label>
+            <input type="text" class="formControl" name="numberplate">
+        </div>
+        <div>
+            <label class="form-label">Vehicle type</label>
+            <input type="text" class="formControl" name="vehicleType">
+        </div>
+        <h3>Others details</h3>
+        <div>
             <label class="form-label">Top Journeys </label>
-            <input type="text" class="form-control" name="topJourneys">
+            <input type="text" class="formControl" name="topJourneys">
         </div>
-        <div class="col-md-6">
+        <div>
             <label class="form-label">User email</label>
-            <input type="text" class="form-control" name="userEmail">
+            <input style="margin-bottom: 15px" type="text" class="formControl" name="userEmail">
         </div>
         <div class="buttons">
-            <a href="{{route('home')}}"><button type ="submit" value="create" class="btn btn-primary">Create</button></a>
-            <button type="reset" value="reset" class="btn btn-primary">Reset</button>
+            <a href="{{route('home')}}"><button type ="submit" value="create" class="btn btn-success">Create</button></a>
+            <button type="reset" value="reset" class="btn btn-danger">Reset</button>
             <a href="{{route('home')}}"><button type="button" class="btn btn-primary">Return</button></a>
         </div>
     </form>
-    </div>
+    
 @endsection
