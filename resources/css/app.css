@@ -11,9 +11,30 @@ main {
     align-items: center;
 }
 
+
 a{
     text-decoration: none!important;
     color: white!important;
+}
+
+img {
+    width: 80%;
+    height: 50%;
+    border-radius: 15px 15px 0 0;
+}
+
+.imgDestination{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #8C9E88;
+    width: 80%;
+    height: auto;
+    padding:12px;
+	border-radius:0 0 10px 10px;
+	margin:auto;
+    color: #162723;
 }
 
 .card{
@@ -72,4 +93,99 @@ form {
 
 form-label {
     padding-top: 50px;
+}
+
+.tripDetails {
+    display: flex;
+    flex-direction: column;
+    background-color: #8C9E88;
+    width: 80%;
+    height: auto;
+    padding:12px;
+	border-radius:10px;
+	margin: 12px;;
+    color: #162723;
+    list-style: none;
+}
+.originTrip .destinationTrip {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.departureTime .arrivalTime{
+    display: flex;
+    flex-direction: column;
+    width: 48px;
+    display: initial;
+    flex-shrink: 0;
+}
+
+div.lineDiv { 
+position: relative;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    min-height: 32px;
+    margin: 0px 8px;
+    width: 8px;
+    flex-shrink: 0;
+    width: 4px;
+    height: calc(13px);
+    background: rgb(5, 71, 82);
+}
+
+.origin, .destination {
+    position: relative;
+    flex: 1 1 0%;
+    padding: 8px 24px 8px 0px;
+}
+
+.arrivalTime{
+    display: flex;
+    flex-direction: column;
+    width: 48px;
+    display: initial;
+    flex-shrink: 0;
+}
+
+.priceTrip, .preferences {
+    background-color: #8C9E88;
+    width: 80%;
+    height: auto;
+    padding:12px;
+	border-radius:10px;
+	margin: 12px;;
+    color: #162723;
+    font-weight: bolder;
+}
+
+div.summaryTrip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8C9E88;
+    width: 80%;
+    height: auto;
+    padding:12px;
+	border-radius:10px;
+	margin: 12px;;
+    color: #162723;
+}
+
+.imgDriver{
+    width: 20%;
+    border-radius: 15px;
+}
+
+
+.vehicleDetails {
+    background-color: #8C9E88;
+    width: 80%;
+    height: auto;
+    padding:12px;
+	border-radius:10px;
+	margin: 12px;;
+    color: #162723;
 }
