@@ -11,6 +11,23 @@ main {
     align-items: center;
 }
 
+h2{
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 700;
+    color: #E0A458;
+}
+
+h3 {
+    margin-top: 0.8rem;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.form-label {
+    margin-top: 0.8rem;
+    margin-bottom: 0.1rem;
+}
 
 a{
     text-decoration: none!important;
@@ -112,7 +129,6 @@ form-label {
     flex-direction: column;
 }
 
-
 .departureTime .arrivalTime{
     display: flex;
     flex-direction: column;
@@ -188,4 +204,14 @@ div.summaryTrip {
 	border-radius:10px;
 	margin: 12px;;
     color: #162723;
+}
+
+div.buttons{
+    margin: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    margin: 3px;
 }

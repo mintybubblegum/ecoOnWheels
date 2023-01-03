@@ -2,24 +2,24 @@
 
 @section('content')
 
-
+    <h2>Create Trip</h2>
     <form action="{{route ('storeTrip')}}" method="post">
         @csrf
-        <h3>Trip details</h3>
+        <h3>Origin details</h3>
         <div>
             <label class="form-label">Origin Address</label>
             <input type="text" class="formControl" name="originAddress">
         </div>
         <div>
-            <label class="form-label">Origin Postcode</label>
+            <label class="form-label">Postcode</label>
             <input type="text" class="formControl" name="originPostcode">
         </div>
         <div>
-            <label class="form-label">Origin City</label>
+            <label class="form-label">City</label>
             <input type="text" class="formControl" name="originCity">
         </div>
         <div>
-            <label class="form-label">Origin Country</label>
+            <label class="form-label">Country</label>
             <input type="text" class="formControl" name="originCountry">
         </div>
         <div>
@@ -30,6 +30,7 @@
             <label class="form-label">Departure Time</label>
             <input type="time" class="formControl" name="departureTime">
         </div>
+        <h3>Destination details</h3>
         <div>
             <label class="form-label">Destination Image</label>
             <input type="text" class="formControl"  name="imgDestination">
@@ -39,15 +40,15 @@
             <input type="text" class="formControl" name="destinationAddress">
         </div>
         <div>
-            <label class="form-label">Destination Postcode</label>
+            <label class="form-label">Postcode</label>
             <input type="text" class="formControl" name="destinationPostcode">
         </div>
         <div>
-            <label class="form-label">Destination City</label>
+            <label class="form-label">City</label>
             <input type="text" class="formControl" name="destinationCity">
         </div>
         <div>
-            <label class="form-label">Destination Country</label>
+            <label class="form-label">Country</label>
             <input type="text" class="formControl" name="destinationCountry">
         </div>
         <div>
