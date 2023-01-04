@@ -13,14 +13,14 @@
     <section class="cardHome">
         <div class="card-body" >
             <a href="{{route ('showTrip', $trip->id)}}">
-            <img src="{{ $trip->imgDestination }}" class="imgDestination img-fluid h-100" alt="..."></a>
-            <h5 class="date"> {{ $trip->date }} </h5>
-            <h5 class="departureTime"> {{ $trip->departureTime }} </h5>
-            <h5 class="originCity"> {{ $trip->originCity }}</h5>
-            <h5 class="arrivalTime"> {{ $trip->arrivalTime }}</h5>
-            <h5 class="destinationCity"> {{ $trip->destinationCity }} </h5>
-            <h5 class="price col-9"> {{ $trip->price }} € </h5>
-            <h5 class="energyType"> {{ $trip->energyType }} </h5>
+            <img src="{{ $trip->imgDestination }}" class="imgCityDestination img-fluid h-100" alt="..."></a>
+            <h6 class="date"> {{ $trip->date }} </h6>
+            <h6 class="departureTime"> {{ $trip->departureTime }} </h6>
+            <h6 class="originCity"> {{ $trip->originCity }}</h6>
+            <h6 class="arrivalTime"> {{ $trip->arrivalTime }}</h6>
+            <h6 class="destinationCity"> {{ $trip->destinationCity }} </h6>
+            <h6 class="price col-9"> {{ $trip->price }} € </h6>
+            <h6 class="energyType"> {{ $trip->energyType }} </h6>
         </div>
                 <form class=formActions action="{{ route('deleteTrip', ['id'=>$trip->id]) }}" method="POST">
                     @method('delete')
