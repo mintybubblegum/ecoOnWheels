@@ -2,25 +2,25 @@
 
 @section('content')
 
-
-    <form class="row g-3" action="{{route ('updateTrip',$trip->id)}}" method="post">
+    <h2>Edit Trip</h2>
+    <form action="{{route ('updateTrip',$trip->id)}}" method="post">
         @method('PATCH')
         @csrf
-        <h3>Trip details</h3>
+        <h3>Origin details</h3>
         <div>
             <label class="form-label">Origin Address</label>
             <input value="{{$trip->originAddress}}" type="text" class="formControl" name="originAddress">
         </div>
         <div>
-            <label class="form-label">Origin Postcode</label>
+            <label class="form-label">Postcode</label>
             <input value="{{$trip->originPostcode}}" type="text" class="formControl" name="originPostcode">
         </div>
         <div>
-            <label class="form-label">Origin City</label>
+            <label class="form-label">City</label>
             <input value="{{$trip->originCity}}" type="text" class="formControl" name="originCity">
         </div>
         <div>
-            <label class="form-label">Origin Country</label>
+            <label class="form-label">Country</label>
             <input value="{{$trip->originCountry}}" type="text" class="formControl" name="originCountry">
         </div>
         <div>
@@ -31,6 +31,7 @@
             <label class="form-label">Departure Time</label>
             <input value="{{$trip->departureTime}}" type="time" class="formControl" name="departureTime">
         </div>
+        <h3>Destination details</h3>
         <div>
             <label class="form-label">Destination Image</label>
             <input value="{{$trip->imgDestination}}" type="text" class="formControl"  name="imgDestination">
@@ -40,15 +41,15 @@
             <input value="{{$trip->destinationAddress}}" type="text" class="formControl" name="destinationAddress">
         </div>
         <div>
-            <label class="form-label">Destination Postcode</label>
+            <label class="form-label">Postcode</label>
             <input value="{{$trip->destinationPostcode}}" type="text" class="formControl" name="destinationPostcode">
         </div>
         <div>
-            <label class="form-label">Destination City</label>
+            <label class="form-label">City</label>
             <input value="{{$trip->destinationCity}}" type="text" class="formControl" name="destinationCity">
         </div>
         <div>
-            <label class="form-label">Destination Country</label>
+            <label class="form-label">Country</label>
             <input value="{{$trip->destinationCountry}}" type="text" class="formControl" name="destinationCountry">
         </div>
         <div>
@@ -57,7 +58,7 @@
         </div>
         <div>
             <label class="form-label">Preferences</label>
-            <textarea value="{{$trip->preferences}}" class="formControl" name="preferences"></textarea>
+            <input type="text" value="{{$trip->preferences}}" class="formControl" name="preferences"></textarea>
         </div>
         <div>
             <label class="form-label">Seats</label>

@@ -11,9 +11,47 @@ main {
     align-items: center;
 }
 
+h2{
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 700;
+    color: #E0A458;
+}
+
+h3 {
+    margin-top: 0.8rem;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.form-label {
+    margin-top: 0.8rem;
+    margin-bottom: 0.1rem;
+}
+
 a{
     text-decoration: none!important;
     color: white!important;
+}
+
+img {
+    width: 80%;
+    height: 50%;
+    border-radius: 15px 15px 0 0;
+}
+
+.imgDestination{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #8C9E88;
+    width: 80%;
+    height: auto;
+    padding:12px;
+	border-radius:0 0 10px 10px;
+	margin:auto;
+    color: #162723;
 }
 
 .card{
@@ -73,73 +111,107 @@ form {
 form-label {
     padding-top: 50px;
 }
-.list {
-    width: 100%;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.cardHome {
-    margin:15px;
-    max-width: 120rem;
-    width: 100%;
-    justify-content: center;
+
+.tripDetails {
+    display: flex;
+    flex-direction: column;
     background-color: #8C9E88;
-    border-radius:  15px 15px 15px 15px;
-    font-size: 0.2rem;
+    width: 80%;
+    height: auto;
+    padding:12px;
+	border-radius:10px;
+	margin: 12px;;
+    color: #162723;
+    list-style: none;
+}
+.originTrip .destinationTrip {
+    display: flex;
+    flex-direction: column;
 }
 
-.card-body {
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: 3fr 1fr 1fr 2fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    color:#162723;
-    
+.departureTime .arrivalTime{
+    display: flex;
+    flex-direction: column;
+    width: 48px;
+    display: initial;
+    flex-shrink: 0;
 }
-.imgDestination {
-    border-radius:  15px 15px 15px 15px;
-    grid-column: 1;
-    grid-row: 1/3;
-    
 
+div.lineDiv { 
+position: relative;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    min-height: 32px;
+    margin: 0px 8px;
+    width: 8px;
+    flex-shrink: 0;
+    width: 4px;
+    height: calc(13px);
+    background: rgb(5, 71, 82);
 }
-.date {
-    text-align: center;
-    margin-top: 20px;
-    color:#162723;
-    grid-column: 1;
-    grid-row: 3/4;
+
+.origin, .destination {
+    position: relative;
+    flex: 1 1 0%;
+    padding: 8px 24px 8px 0px;
 }
-.price {
-    grid-column: 4;
-    grid-row: 2;
-    margin-left: 20px;
+
+.arrivalTime{
+    display: flex;
+    flex-direction: column;
+    width: 48px;
+    display: initial;
+    flex-shrink: 0;
 }
-.departureTime {
-    margin-top:20px ;
-    grid-column: 2;
-    grid-row: 1;
+
+.priceTrip, .preferences {
+    background-color: #8C9E88;
+    width: 80%;
+    height: auto;
+    padding:12px;
+	border-radius:10px;
+	margin: 12px;;
+    color: #162723;
+    font-weight: bolder;
 }
-.arrivalTime {
-    
-    grid-column: 2;
-    grid-row: 2;  
+
+div.summaryTrip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8C9E88;
+    width: 80%;
+    height: auto;
+    padding:12px;
+	border-radius:10px;
+	margin: 12px;;
+    color: #162723;
 }
-.originCity {
-    margin-top: 20px;
-    grid-column: 3;
-    grid-row: 1;
+
+.imgDriver{
+    width: 20%;
+    border-radius: 15px;
 }
-.destinationCity {
-    
-    grid-column: 3;
-    grid-row: 2; 
+
+
+.vehicleDetails {
+    background-color: #8C9E88;
+    width: 80%;
+    height: auto;
+    padding:12px;
+	border-radius:10px;
+	margin: 12px;;
+    color: #162723;
 }
-.energyType {
-    margin-top:30px ;
-    grid-column: 2/4;
-    grid-row: 3;
-    text-transform:uppercase;
-    font-weight: bold;
+
+div.buttons{
+    margin: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    margin: 3px;
 }
