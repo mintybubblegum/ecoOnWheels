@@ -235,26 +235,31 @@ div.buttons{
     max-width: 100%;
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 2fr;
-    grid-template-rows: 1fr 1fr 1fr;
     color:#162723;
     
+}
+
+@media (min-width:768px){
+    .list{
+        width:60%
+    }
 }
 .imgCityDestination {
     border-radius:  15px 15px 15px 15px;
     grid-column: 1;
-    grid-row: 1/3;
 }
 .date {
-    text-align: center;
-    margin-top: 20px;
+    margin-left:7px ;
+    margin-top: 5px;
     color:#162723;
     grid-column: 1;
     grid-row: 3/4;
 }
 .price {
     grid-column: 4;
-    grid-row: 2;
-    margin-left: 20px;
+    grid-row: 1;
+    margin-left: 30px;
+    margin-top: 60px;
 }
 .departureTime {
     margin-top:20px ;
@@ -262,22 +267,24 @@ div.buttons{
     grid-row: 1;
 }
 .arrivalTime {
-    
+    margin-top: 60px;
     grid-column: 2;
-    grid-row: 2;  
+    grid-row: 1;  
 }
 .originCity {
     margin-top: 20px;
     grid-column: 3;
     grid-row: 1;
+    margin-left: 20px;
 }
 .destinationCity {
-    
     grid-column: 3;
-    grid-row: 2; 
+    grid-row: 1; 
+    margin-left: 20px;
+    margin-top: 60px;
 }
 .energyType {
-    margin-top:30px ;
+    margin-top:5px ;
     grid-column: 2/4;
     grid-row: 3;
     text-transform:uppercase;
