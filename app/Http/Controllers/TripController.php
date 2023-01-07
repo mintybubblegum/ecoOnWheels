@@ -16,7 +16,7 @@ class TripController extends Controller
      */
     public function index()
     {
-        $trips= Trip::get();
+        $trips= Trip::simplePaginate(5);
 
         return view('home', compact('trips'));
     }

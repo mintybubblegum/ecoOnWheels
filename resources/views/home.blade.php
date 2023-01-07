@@ -27,10 +27,13 @@
                     @csrf
                     <a href="{{route ('editTrip',['id'=>$trip->id])}}">✏</a>
                     <button type="submit" onclick="return confirm ('Are you sure you want to delete this trip to {{ $trip->destinationCity }}?')">🗑</button>
-                </form>     
+                </form>
+                
     </section>
     @endforeach
 </div>
-
+<div style="background-color:black">
+    {!! $trips->links()!!}
+</div>
 
 @endsection
