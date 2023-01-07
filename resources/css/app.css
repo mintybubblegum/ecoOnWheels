@@ -291,4 +291,18 @@ div.buttons{
     font-weight: bold;
 }
 
+.bg-white {
+    background-color: #E0A458 !important;
+    opacity: inherit !important;
+    color: #162723;
+    font-weight: bold;
+}
+
+.buttonHome {
+    font-size: 12px !important;
+    background: #E0A458;
+    color: #162723;
+    width: 52px;
+    height: 25px;
+}
 

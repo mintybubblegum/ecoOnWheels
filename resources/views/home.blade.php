@@ -22,13 +22,14 @@
             <h6 class="price col-9"> {{ $trip->price }} € </h6>
             <h6 class="energyType"> {{ $trip->energyType }} </h6>
         </div>
-                <form class=formActions action="{{ route('deleteTrip', ['id'=>$trip->id]) }}" method="POST">
-                    @method('delete')
-                    @csrf
-                    <a href="{{route ('editTrip',['id'=>$trip->id])}}">✏</a>
-                    <button type="submit" onclick="return confirm ('Are you sure you want to delete this trip to {{ $trip->destinationCity }}?')">🗑</button>
-                </form>
-                
+        <form class=formActions action="{{ route('deleteTrip', ['id'=>$trip->id]) }}" method="POST">
+            @method('delete')
+            @csrf
+            <a href="{{route ('editTrip',['id'=>$trip->id])}}">
+                <button type="button" class=buttonHome>Edit</button>
+            </a>
+            <button type="submit" onclick="return confirm ('Are you sure you want to delete this trip to {{ $trip->destinationCity }}?')" class=buttonHome>Delete</button>
+        </form>                
     </section>
     @endforeach
 </div>
