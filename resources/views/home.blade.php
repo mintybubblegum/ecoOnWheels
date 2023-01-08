@@ -33,7 +33,7 @@
     </section>
     @endforeach
 </div>
-<div style="background-color:black">
+<div>
     {!! $trips->links()!!}
 </div>
 

@@ -114,7 +114,7 @@ form-label {
 
 .tripDetails {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: #8C9E88;
     width: 80%;
     height: auto;
@@ -124,47 +124,40 @@ form-label {
     color: #162723;
     list-style: none;
 }
-.originTrip .destinationTrip {
+
+.timeDetails {
+    margin: 5px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 20%;
+    position: relative;
 }
 
-.departureTime .arrivalTime{
+.imgLeafLine { 
+    margin: 5px;
+    position: relative;
     display: flex;
     flex-direction: column;
-    width: 48px;
-    display: initial;
-    flex-shrink: 0;
-}
-
-div.lineDiv { 
-position: relative;
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
     -webkit-box-align: center;
     align-items: center;
-    min-height: 32px;
-    margin: 0px 8px;
-    width: 8px;
+    min-height: 130px;
+    width: 50px;
     flex-shrink: 0;
-    width: 4px;
     height: calc(13px);
-    background: rgb(5, 71, 82);
 }
 
-.origin, .destination {
+.addressDetails {
     position: relative;
-    flex: 1 1 0%;
-    padding: 8px 24px 8px 0px;
-}
-
-.arrivalTime{
     display: flex;
     flex-direction: column;
-    width: 48px;
-    display: initial;
-    flex-shrink: 0;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70%;
 }
+
 
 .priceTrip, .preferences {
     background-color: #8C9E88;
@@ -298,11 +291,49 @@ div.buttons{
     font-weight: bold;
 }
 
+.formActions {
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .buttonHome {
     font-size: 12px !important;
     background: #E0A458;
     color: #162723;
     width: 52px;
     height: 25px;
+    border-color: #E0A458 ;
+    border-radius: 10px;
+}
+
+.text-muted {
+    --bs-text-opacity: 1;
+    color: #E0A458 !important;
+}
+
+a.page-link{
+    color: #162723 !important;;
+}
+
+.pagination {
+    --bs-pagination-bg: #E0A458;
+    --bs-pagination-color: var(--bs-link-color);
+    --bs-pagination-border-width: 1px;
+    --bs-pagination-border-color: #8C9E88;
+    --bs-pagination-border-radius: 0.375rem;
+    --bs-pagination-hover-color: var(--bs-link-hover-color);
+    --bs-pagination-hover-bg: #e9ecef;
+    --bs-pagination-hover-border-color: #dee2e6;
+    --bs-pagination-focus-color: var(--bs-link-hover-color);
+    --bs-pagination-focus-bg: #e9ecef;
+    --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    --bs-pagination-active-color: #162723;
+    --bs-pagination-active-bg: #8C9E88;
+    --bs-pagination-active-border-color: #8C9E88;
+    --bs-pagination-disabled-color: #6c757d;
+    --bs-pagination-disabled-bg: #E0A458;
+    --bs-pagination-disabled-border-color: #8C9E88;
+
 }
 
