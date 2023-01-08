@@ -89,7 +89,7 @@ form {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items:  center;
+    align-items: center;
 }
 
 .formControl { 
@@ -158,8 +158,13 @@ form-label {
     width: 70%;
 }
 
+.seatsDetailsContainer {
+    display: flex;
+    width: 82%;
+    
+}
 
-.priceTrip, .preferences {
+.seatsDetails {
     background-color: #8C9E88;
     width: 80%;
     height: auto;
@@ -170,7 +175,18 @@ form-label {
     font-weight: bolder;
 }
 
-div.summaryTrip {
+.preferences {
+    background-color: #8C9E88;
+    width: 80%;
+    height: auto;
+    padding:12px;
+	border-radius:10px;
+	margin: 12px;;
+    color: #162723;
+
+}
+
+div.driverDetails {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -181,6 +197,10 @@ div.summaryTrip {
 	border-radius:10px;
 	margin: 12px;;
     color: #162723;
+}
+
+#text {
+    text-align: center;
 }
 
 .imgDriver{

@@ -6,7 +6,8 @@
     <div class="imgDestination" >
         <h3>{{$trip->date}}</h3>
     </div>
-    
+    <br>
+    <h2>Trip details</h2>
     <div class="tripDetails">
         <div class="timeDetails">
             <div class="departureTime">{{$trip->departureTime}}</div>
@@ -20,25 +21,36 @@
             <div class="destination">{{$trip->destinationAddress}}, CP: {{$trip->destinationPostcode}}. {{$trip->destinationCity}}-{{$trip->destinationCountry}}</div>
         </div>
     </div>
-    
-        <h3 class="priceTrip"> Cost per passenger: {{$trip->price}}€</h3>
-        <div class="summaryTrip">
-            <h3>Seats available: {{$trip->seats}}</h3>
-            <h3>Driver's name: {{$trip->driverName}}</h3>
-            <h3>Number phone: {{$trip->driverPhone}}</h3>
+        <div class="seatsDetailsContainer">
+            <h3 class="seatsDetails"> Cost per passenger: {{$trip->price}}€</h3>
+            <h3 class="seatsDetails"> Seats available: {{$trip->seats}}</h3>  
+        </div>
+        
+        <h2>Driver details</h2>
+        <div class="driverDetails">
+            <h4>Driver's name:  <br>{{$trip->driverName}}</h4> 
+            <h4>Number phone: <br>{{$trip->driverPhone}}</h4> 
             <img class="imgDriver" src="{{$trip->driverImg}}" alt="Driver Image">
         </div>
 
-            <h3 class="preferences"> Preferences: <div>{{$trip->preferences}}</div> </h3>
+            <div class="preferences"> 
+                <h4>Preferences:</h4>
+                <p>{{$trip->preferences}}</p> 
+            </div> 
             <h2>Vehicle details</h2>
             <div class="vehicleDetails">
-                <h3>Energy type: {{$trip->energyType}}</h3>
-                <h3>Numberplate: {{$trip->numberplate}}</h3>
-                <h3>Vehicle type: {{$trip->vehicleType}}</h3>
+                <h3>Energy type: </h3>
+                <h4> {{$trip->energyType}}</h4>
+                <h3>Numberplate: </h3>
+                <h4>{{$trip->numberplate}}</h4>
+                <h3>Vehicle type: </h3>
+                <h4>{{$trip->vehicleType}}</h4>
             </div>
             
         
-        <a href="{{route ('home')}}">↩</a>
+        <a href="{{route ('home')}}">
+            <button type="button" class=buttonHome>Home</button>
+        </a>
     
     
 @endsection
