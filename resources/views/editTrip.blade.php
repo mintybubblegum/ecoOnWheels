@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-
-    <h2>Edit Trip</h2>
+    <div class="containerTitle">
+        <h2>Edit Trip</h2>
+    </div>
     <form action="{{route ('updateTrip',$trip->id)}}" method="post">
         @method('PATCH')
         @csrf
@@ -70,19 +71,19 @@
         </div>
         <h3>Driver data</h3>
         <div>
-            <label class="form-label">Driver name</label>
+            <label class="form-label">Driver's name</label>
             <input value="{{$trip->driverName}}" type="text" class="formControl" name="driverName">
         </div>
         <div>
-            <label class="form-label">Driver surname</label>
+            <label class="form-label">Driver's surname</label>
             <input value="{{$trip->driverSurname}}" type="text" class="formControl" name="driverSurname">
         </div>
         <div>
-            <label class="form-label">Driver number phone</label>
+            <label class="form-label">Driver's number phone</label>
             <input value="{{$trip->driverPhone}}" type="text" class="formControl" name="driverPhone">
         </div>
         <div>
-            <label class="form-label">Driver Image</label>
+            <label class="form-label">Driver's Image</label>
             <input value="{{$trip->driverImg}}" type="text" class="formControl"  name="driverImg">
         </div>
         <h3>Vehicle data</h3>
@@ -91,7 +92,7 @@
             <input value="{{$trip->energyType}}" type="text" class="formControl" name="energyType">
         </div>
         <div>
-            <label class="form-label">Vehicle number plate</label>
+            <label class="form-label">Vehicle numberplate</label>
             <input value="{{$trip->numberplate}}" type="text" class="formControl" name="numberplate">
         </div>
         <div>

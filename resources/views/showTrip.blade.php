@@ -7,6 +7,7 @@
         <h3>{{$trip->date}}</h3>
     </div>
     <br>
+    
     <h2>Trip details</h2>
     <div class="tripDetails">
         <div class="timeDetails">

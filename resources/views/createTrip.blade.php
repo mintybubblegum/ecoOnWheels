@@ -1,8 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-
-    <h2>Create Trip</h2>
+    <div class="containerTitle">
+        <h2>Create Trip</h2>
+    </div>
+    
     <form action="{{route ('storeTrip')}}" method="post">
         @csrf
         <h3>Origin details</h3>
@@ -69,15 +71,15 @@
         </div>
         <h3>Driver data</h3>
         <div>
-            <label class="form-label">Driver name</label>
+            <label class="form-label">Driver's name</label>
             <input type="text" class="formControl" name="driverName">
         </div>
         <div>
-            <label class="form-label">Driver surname</label>
+            <label class="form-label">Driver's surname</label>
             <input type="text" class="formControl" name="driverSurname">
         </div>
         <div>
-            <label class="form-label">Driver number phone</label>
+            <label class="form-label">Driver's number phone</label>
             <input type="text" class="formControl" name="driverPhone">
         </div>
         <div>
@@ -90,7 +92,7 @@
             <input type="text" class="formControl" name="energyType">
         </div>
         <div>
-            <label class="form-label">Vehicle number plate</label>
+            <label class="form-label">Vehicle numberplate</label>
             <input type="text" class="formControl" name="numberplate">
         </div>
         <div>

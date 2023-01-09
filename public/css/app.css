@@ -16,16 +16,20 @@ main {
     background-color: #162723!important;
 }
 
-.navbar-toggler-icon {
+a.nav-link {
+    color: #e0a458!important;
+}
+
+/* span.navbar-toggler-icon {
     display: inline-block;
     width: 1.5em;
     height: 1.5em;
     vertical-align: middle;
-    background-image: url(../images/burgerMenu.png);
+    color: #E0A458;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
-}
+} */
 
 h2{
     margin-bottom: 15px;
@@ -35,8 +39,8 @@ h2{
 }
 
 h3 {
-    margin-top: 0.8rem;
-    margin-bottom: 0.3rem;
+    margin-top: 12px!important;
+    margin-bottom: 0!important;
     font-weight: 600;
 }
 
@@ -61,7 +65,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #8C9E88;
+    background-color: #E0A458;
     width: 80%;
     height: auto;
     padding:12px;
@@ -126,6 +130,21 @@ form {
 
 form-label {
     padding-top: 50px;
+}
+
+.containerTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #E0A458;
+    width: 80%;
+    text-align: center ;
+    height: auto;
+    padding:5px;
+	border-radius:10px;
+	margin: 12px;;
+    color: #162723;
+
 }
 
 .tripDetails {
