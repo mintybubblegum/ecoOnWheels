@@ -336,7 +336,7 @@ div.buttons{
     border-radius: 10px;
 }
 
-.text-muted {
+p.small.text-muted {
     --bs-text-opacity: 1;
     color: #E0A458 !important;
 }
@@ -345,7 +345,7 @@ a.page-link{
     color: #162723 !important;;
 }
 
-.pagination {
+ul.pagination {
     --bs-pagination-bg: #E0A458;
     --bs-pagination-color: var(--bs-link-color);
     --bs-pagination-border-width: 1px;
