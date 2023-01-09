@@ -48,5 +48,4 @@
             <button type="button" class=buttonHome>Home</button>
         </a>
     
-    
 @endsection
