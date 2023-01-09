@@ -1,14 +1,30 @@
 body {
     background-color: #162723;
-    color: rgb(237, 232, 232);
+    
 }
 
 main {
-    width: 95%;
+    background-color: #162723;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.bgHeader {
+    background-color: #162723!important;
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-image: url(../images/burgerMenu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
 }
 
 h2{
@@ -301,13 +317,6 @@ div.buttons{
     grid-column: 2/4;
     grid-row: 3;
     text-transform:uppercase;
-    font-weight: bold;
-}
-
-.bg-white {
-    background-color: #E0A458 !important;
-    opacity: inherit !important;
-    color: #162723;
     font-weight: bold;
 }
 
