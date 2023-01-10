@@ -3,9 +3,11 @@
 @section('content')
 
 <div>
-    <button class="btn btn-primary" style="color: white">
+    @if (Auth::check() && Auth::user()->isAdmin)
+        <button class="btn btn-primary" style="color: white">
         <a href="{{route('createTrip')}}">Create New Trip</a>
-    </button>
+        </button>
+    @endif
 </div>
 
 <div class="list" >
@@ -22,14 +24,16 @@
             <h6 class="price col-9"> {{ $trip->price }} € </h6>
             <h6 class="energyType"> {{ $trip->energyType }} </h6>
         </div>
-        <form class=formActions action="{{ route('deleteTrip', ['id'=>$trip->id]) }}" method="POST">
-            @method('delete')
-            @csrf
-            <a href="{{route ('editTrip',['id'=>$trip->id])}}">
-                <button type="button" class=buttonHome>Edit</button>
-            </a>
-            <button type="submit" onclick="return confirm ('Are you sure you want to delete this trip to {{ $trip->destinationCity }}?')" class=buttonHome>Delete</button>
-        </form>                
+        @if (Auth::check() && Auth::user()->isAdmin)
+            <form class=formActions action="{{ route('deleteTrip', ['id'=>$trip->id]) }}" method="POST">
+                @method('delete')
+                @csrf
+                <a href="{{route ('editTrip',['id'=>$trip->id])}}">
+                    <button type="button" class=buttonHome>Edit</button>
+                </a>
+                <button type="submit" onclick="return confirm ('Are you sure you want to delete this trip to {{ $trip->destinationCity }}?')" class=buttonHome>Delete</button>
+            </form>  
+        @endif              
     </section>
     @endforeach
 </div>
