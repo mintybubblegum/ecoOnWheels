@@ -1,4 +1,4 @@
-# Eco On Wheels
+# Eco On Wheels🚘🌲
 
 EcoOnWheels is a travel app that offers users the possibility to share costs and resources in a sustainable way.
 
@@ -121,8 +121,8 @@ To run the tests, execute the following command(s)
 - Establish pagination order
 - Implement user management and roles associated with each role
 - Display unavailable past trips
-- Send email confirmation of booked trips
-- Adjust css styles
+- Send confirmation email of booked trips
+- Adjust CSS styles
 - Dropdown of destination images
 - Checkbox in preferences
 - Radio button to add trip to slider
