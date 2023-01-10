@@ -3,8 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
 use App\Models\Trip;
+use App\Models\User;
+use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -151,6 +152,20 @@ class DatabaseSeeder extends Seeder
 
         Trip::factory(10)->create();
 
+        User::factory()->create([
+            'name' => 'admin',
+            'email' => 'admin@admin.com',
+            'isAdmin' => true,
+        ]); 
+
+        User::factory()->create([
+            'name' => 'user1',
+            'email' => 'user1@user1.com',
+            'isAdmin' => false,
+        ]); 
+
+        User::factory(5)->create(); 
+        
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
