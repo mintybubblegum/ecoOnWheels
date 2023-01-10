@@ -1,8 +1,10 @@
-# Eco On Wheels
+# Eco On Wheels🚘🌲
 
-Eco on wheels is a web application for managing trips and being able to sign up for them through a role system.
+EcoOnWheels is a travel app that offers users the possibility to share costs and resources in a sustainable way.
 
-Users will be able to see the description of a trip, sign up and unsubscribe. They will be able to see the list of trips they have signed up for. The administrator must have the tools for the management (CRUD) of the trips.
+All registered vehicles use renewable energy to have a lower impact on the planet.
+
+We opt for a dark mode on our devices to reduce visual impact, save battery and care for the environment.
 ***
 
 ## Table of contents
@@ -13,6 +15,8 @@ Users will be able to see the description of a trip, sign up and unsubscribe. Th
 * [Tests](#tests)
 * [Methodology](#methodology)
 * [Next Steps](#next-steps)
+
+***
 
 ## Team Members
 
@@ -30,9 +34,9 @@ Users will be able to see the description of a trip, sign up and unsubscribe. Th
 
 <div style="heigth:auto; display:flex; flex-wrap:wrap; justify-content:center; padding:1rem">
 
-| Home view sketch | Show view sketch | Home view mockup | Show view mockup |
-| --- | --- | --- | --- |
-| <img style="width:150px;" src="https://user-images.githubusercontent.com/98114939/210433972-aea85b9d-5f19-4af2-96bd-72ec35a681ea.png" alt="Home view"/> | <img style="width:150px;" src="https://user-images.githubusercontent.com/98114939/210434007-f0b7288b-e031-472a-8cd2-6970ef1cc6d5.png" alt="Show view"/> | <img style="width:150px;" src="https://user-images.githubusercontent.com/98114939/210436616-e26a4ff3-1b9a-4caa-98d1-c6f48d1fcb68.png" alt="Home view"/> | <img style="width:150px;" src="https://user-images.githubusercontent.com/98114939/210436641-37b45b15-5685-4f98-b051-ed40e0f3780d.png" alt="Show view"/> |
+| Home view sketch | Show view sketch | Home view mockup | Show view mockup | Create view mockup |
+| --- | --- | --- | --- | --- |
+| <img style="width:150px;" src="https://user-images.githubusercontent.com/98114939/210433972-aea85b9d-5f19-4af2-96bd-72ec35a681ea.png" alt="Home view"/> | <img style="width:150px;" src="https://user-images.githubusercontent.com/98114939/210434007-f0b7288b-e031-472a-8cd2-6970ef1cc6d5.png" alt="Show view"/> | <img style="width:150px;" src="https://user-images.githubusercontent.com/98114939/210436616-e26a4ff3-1b9a-4caa-98d1-c6f48d1fcb68.png" alt="Home view"/> | <img style="width:150px;" src="https://user-images.githubusercontent.com/98114939/210436641-37b45b15-5685-4f98-b051-ed40e0f3780d.png" alt="Show view"/> | <img style="width:75px;" src="https://user-images.githubusercontent.com/98114939/211341367-187230a2-f308-4399-850c-82a564ad443e.png" alt="Create view"/> |
 
 </div>
 
@@ -46,6 +50,7 @@ Users will be able to see the description of a trip, sign up and unsubscribe. Th
 - PHP 8.1.10
 - Laravel Framework 9.44.0
 - MySQL
+- DrawSQL
 ***
 
 ## How to install this project
@@ -112,4 +117,13 @@ To run the tests, execute the following command(s)
 ***
 
 ## Next Steps
-Only the CRUD of the administrator role has been implemented as MVP. Pending implementation of user and guest role functionalities.
+- Add carousel of featured trips
+- Establish pagination order
+- Implement user management and roles associated with each role
+- Display unavailable past trips
+- Send confirmation email of booked trips
+- Adjust CSS styles
+- Dropdown of destination images
+- Checkbox in preferences
+- Radio button to add trip to slider
+- Validate forms with regular expressions
