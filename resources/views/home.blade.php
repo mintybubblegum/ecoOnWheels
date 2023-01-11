@@ -4,12 +4,12 @@
 
 @section('content')
 
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
         @foreach ($sliders as $key => $item)
             <div class="carousel-item {{ $key == 0 ? ' active' : ''}}">
                 @if ($item->imgDestination)
-                <img src="{{ asset("$item->imgDestination") }}" class="d-block w-100" alt="...">
+                <img src="{{ asset("$item->imgDestination") }}" class="d-block w-100" alt="City destination picture">
                 @endif
                 <div class="carousel-caption d-none d-md-block">
                 <h5>{{$item->originCity}}->{{$item->destinationCity}}</h5>
