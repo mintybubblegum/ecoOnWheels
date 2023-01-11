@@ -7,6 +7,7 @@ use App\Models\Trip;
 
 
 
+
 class TripController extends Controller
 {
     /**
@@ -16,9 +17,12 @@ class TripController extends Controller
      */
     public function index()
     {
+
+        $sliders= Trip::where('topJourneys','1')->get();
+
         $trips= Trip::Paginate(5);
 
-        return view('home', compact('trips'));
+        return view('home', compact('sliders') ,compact('trips'));
     }
 
     /**

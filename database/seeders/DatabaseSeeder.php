@@ -66,7 +66,7 @@ class DatabaseSeeder extends Seeder
             'date' => '2023-01-03',
             'departureTime' => '09:00',
             'arrivalTime' => '12:40',
-            'topJourneys'=>0,
+            'topJourneys'=>1,
             'userEmail'=> 'bea@gmail.com',
         ]);
         Trip::factory()->create([
@@ -119,7 +119,7 @@ class DatabaseSeeder extends Seeder
             'date' => '2022-12-31',
             'departureTime' => '16:00',
             'arrivalTime' => '18:25',
-            'topJourneys'=>0,
+            'topJourneys'=>1,
             'userEmail'=> 'Maribelpg@hotmail.es',
         ]);
 
@@ -146,7 +146,7 @@ class DatabaseSeeder extends Seeder
             'date' => '2023-01-10',
             'departureTime' => '07:00',
             'arrivalTime' => '08:00',
-            'topJourneys'=> 0,
+            'topJourneys'=> 1,
             'userEmail'=> 'Jmarteavilchez@gmail.com',
         ]);
 
