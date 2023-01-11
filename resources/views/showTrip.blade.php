@@ -2,8 +2,8 @@
 
 @section('content')
     
-    <img src="{{$trip->imgDestination}}" alt="Destination Image">
-    <div class="imgDestination" >
+    <img class="imgDestinationShow" src="{{$trip->imgDestination}}" alt="Destination Image">
+    <div class="boxDestinationShow" >
         <h3>{{$trip->date}}</h3>
     </div>
     <br>

@@ -12,58 +12,12 @@ main {
     align-items: center;
 }
 
-.bgHeader {
-    background-color: #162723!important;
-}
-
-a.nav-link {
-    color: #e0a458!important;
-}
-
-/* span.navbar-toggler-icon {
-    display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
-    vertical-align: middle;
-    color: #E0A458;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-} */
-
-h2{
-    margin-bottom: 15px;
-    text-align: center;
-    font-weight: 700;
-    color: #162723!important;
-}
-
-h3 {
-    margin-top: 12px!important;
-    margin-bottom: 0!important;
-    font-weight: 600;
-}
-
-.form-label {
-    margin-top: 0.8rem;
-    margin-bottom: 0.1rem;
-}
-
-a{
-    text-decoration: none!important;
-    color: #162723!important;
-    
-}
-
-
-
-img {
+.imgDestinationShow{
+    display:flex;
+    align-items: center;
     width: 80%;
-    height: 50%;
-    border-radius: 15px 15px 0 0;
 }
-
-.imgDestination{
+.boxDestinationShow{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -71,107 +25,49 @@ img {
     background-color: #E0A458;
     width: 80%;
     height: auto;
-    padding:12px;
+    /*padding:1px;*/
 	border-radius:0 0 10px 10px;
 	margin:auto;
     color: #162723;
 }
 
-.card{
-    margin:5px;
-    background-color: #8C9E88;
+h3 {
+    margin-top: 12px!important;
+    margin-bottom: 10px!important;
+    font-size: 16px!important;
 }
 
-.card-title {
-    color:#162723;
-}
-
-.price {
-    font-weight: bolder;
-}
-
-form {
-    width:320px;
-	padding:12px;
-	border-radius:10px;
-	margin:auto;
-	background-color:#8C9E88;
-    color: #162723;
-}
-
-.formActions{
-    background-color: transparent;
-}
-
-.formstyle {
-    box-sizing: content-box;
-    width: 100%;
-    margin: 15px;
-    background-color: #8C9E88;
-    color: #8C9E88;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.formControl { 
-    display: block;
-    width: 80%; 
-    padding: 0.3rem 0.75rem;
-    font-size: 0.9rem;
-    font-weight: 500;
-    line-height: 1.6;
-    color: #212529;
-    background-color: rgba(140, 158, 136, 0.7);;
-    background-clip: padding-box;
-    border: 1px solid #162723;
-    appearance: none;
-    border-radius: 0.375rem;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-form-label {
-    padding-top: 50px;
-}
-
-.containerTitle{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: #E0A458;
+/*img {
     width: 80%;
-    text-align: center ;
-    height: auto;
-    padding:5px;
-	border-radius:10px;
-	margin: 12px;;
-    color: #162723;
-
-}
+    height: 50%;
+    border-radius: 15px 15px 0 0;
+}*/
 
 .tripDetails {
     display: flex;
     flex-direction: row;
+    align-items: center;
     background-color: #8C9E88;
     width: 80%;
-    height: auto;
-    padding:12px;
+    height: 250px;
 	border-radius:10px;
-	margin: 12px;;
+	margin: 12px;
     color: #162723;
     list-style: none;
+
 }
 
 div.timeDetails {
     margin: 5px;
+    align-items: center;
     display: grid;
-    grid-template-rows: 0.75fr 0.2fr 1fr;
+    grid-template-rows: 1fr 1fr;
     position: relative;
 }
 
 div.departureTime {
-    grid-area: 1 / 1 / 2 / 2; 
+    grid-area: 1 / 1 / 2 / 2;
+    margin-top: 1px;
 }
 
 div.arrivalTime { 
@@ -186,23 +82,27 @@ div.addressDetails {
 }
 
 div.origin {
+    align-items: flex-start;
     margin-top: 15px;
     grid-area: 1 / 1 / 2 / 2; 
 }
 
 div.destination { 
+    grid-row-end: 5;
+    place-content: center;
     grid-area: 2 / 1 / 3 / 2;  
 }
 
-.imgLeafLine { 
-    margin-top: 20px;
+div.imgLeafLine { 
+    grid-template-rows: 1fr;
+    display: grid;
+    /*margin-top: 20px;
+    margin-bottom: -20px;*/
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    /*flex-direction: column;*/
+    /*justify-content: flex-start;*/
     -webkit-box-align: center;
-    align-items: center;
-    min-height: 300px;
+    align-content: flex-end;
     width: 50px;
     flex-shrink: 0;
     height: calc(13px);
