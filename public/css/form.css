@@ -31,22 +31,22 @@ a.nav-link {
     background-size: 100%;
 } */
 
-h2{
-    margin-bottom: 15px;
+.createTitle {
+    margin-top: 10px;
     text-align: center;
-    font-weight: 700;
+    font-weight: bold;
     color: #162723!important;
+    text-transform: uppercase;
+}
+
+.topTitle {
+    margin-top: 12px!important;
 }
 
 h3 {
-    margin-top: 12px!important;
+    margin-top: 35px!important;
     margin-bottom: 0!important;
-    font-weight: 600;
-}
-
-.form-label {
-    margin-top: 0.8rem;
-    margin-bottom: 0.1rem;
+    font-weight: 700;
 }
 
 a{
@@ -55,52 +55,25 @@ a{
     
 }
 
-
-
-img {
-    width: 80%;
-    height: 50%;
-    border-radius: 15px 15px 0 0;
-}
-
-.imgDestination{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #E0A458;
-    width: 80%;
-    height: auto;
-    padding:12px;
-	border-radius:0 0 10px 10px;
-	margin:auto;
-    color: #162723;
-}
-
-.card{
-    margin:5px;
-    background-color: #8C9E88;
-}
-
-.card-title {
-    color:#162723;
-}
-
-.price {
-    font-weight: bolder;
-}
+/* STARTS FORMS */
 
 form {
     width:320px;
-	padding:12px;
+	padding:12px 20px 12px 20px;
 	border-radius:10px;
-	margin:auto;
+	/* margin:auto; */
 	background-color:#8C9E88;
     color: #162723;
 }
 
+.form-label {
+    margin-top: 0.8rem;
+}
+
 .formActions{
     background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .formstyle {
@@ -117,7 +90,7 @@ form {
 
 .formControl { 
     display: block;
-    width: 80%; 
+    width: 90%; 
     padding: 0.3rem 0.75rem;
     font-size: 0.9rem;
     font-weight: 500;
@@ -131,142 +104,21 @@ form {
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-form-label {
-    padding-top: 50px;
-}
-
 .containerTitle{
     display: flex;
     flex-direction: row;
     justify-content: center;
     background-color: #E0A458;
-    width: 80%;
-    text-align: center ;
+    width: 100%;
+    text-align: center;
     height: auto;
-    padding:5px;
-	border-radius:10px;
-	margin: 12px;;
-    color: #162723;
-
-}
-
-.tripDetails {
-    display: flex;
-    flex-direction: row;
-    background-color: #8C9E88;
-    width: 80%;
-    height: auto;
-    padding:12px;
-	border-radius:10px;
-	margin: 12px;;
-    color: #162723;
-    list-style: none;
-}
-
-div.timeDetails {
-    margin: 5px;
-    display: grid;
-    grid-template-rows: 0.75fr 0.2fr 1fr;
-    position: relative;
-}
-
-div.departureTime {
-    grid-area: 1 / 1 / 2 / 2; 
-}
-
-div.arrivalTime { 
-    grid-area: 2 / 1 / 3 / 2;  
-}
-
-div.addressDetails {
-    margin: 5px;
-    display: grid;
-    grid-template-rows: 1fr 1fr ;
-    position: relative;
-}
-
-div.origin {
-    margin-top: 15px;
-    grid-area: 1 / 1 / 2 / 2; 
-}
-
-div.destination { 
-    grid-area: 2 / 1 / 3 / 2;  
-}
-
-.imgLeafLine { 
-    margin-top: 20px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    -webkit-box-align: center;
-    align-items: center;
-    min-height: 300px;
-    width: 50px;
-    flex-shrink: 0;
-    height: calc(13px);
-}
-
-.seatsDetailsContainer {
-    display: flex;
-    width: 82%;
-    
-}
-
-.seatsDetails {
-    background-color: #8C9E88;
-    width: 80%;
-    height: auto;
-    padding:12px;
-	border-radius:10px;
-	margin: 12px;;
-    color: #162723;
-    font-weight: bold;
-}
-
-.preferences {
-    background-color: #8C9E88;
-    width: 80%;
-    height: auto;
-    padding:12px;
-	border-radius:10px;
-	margin: 12px;;
-    color: #162723;
-
-}
-
-div.driverDetails {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #8C9E88;
-    width: 80%;
-    height: auto;
-    padding:12px;
-	border-radius:10px;
-	margin: 12px;;
+    padding: 5px;
+	margin: 12px;
     color: #162723;
 }
 
 #text {
     text-align: center;
-}
-
-.imgDriver{
-    width: 20%;
-    border-radius: 15px;
-}
-
-
-.vehicleDetails {
-    background-color: #8C9E88;
-    width: 80%;
-    height: auto;
-    padding:12px;
-	border-radius:10px;
-	margin: 12px;;
-    color: #162723;
 }
 
 div.buttons{
@@ -278,12 +130,14 @@ div.buttons{
 .btn {
     margin: 3px;
 }
+
 .list {
     width: 100%;
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .cardHome {
     margin:15px;
     max-width: 120rem;
@@ -307,10 +161,7 @@ div.buttons{
         width:60%
     }
 }
-.imgCityDestination {
-    border-radius:  15px 15px 15px 15px;
-    grid-column: 1;
-}
+
 .date {
     margin-left:7px ;
     margin-top: 5px;
@@ -354,12 +205,6 @@ div.buttons{
     font-weight: bold;
 }
 
-.formActions {
-    background-color: transparent;
-    display: flex;
-    justify-content: flex-end;
-}
-
 .buttonHome {
     font-size: 12px !important;
     background: #E0A458;
@@ -374,29 +219,4 @@ div.buttons{
 p.small.text-muted {
     --bs-text-opacity: 1;
     color: #E0A458 !important;
-}
-
-a.page-link{
-    color: #162723 !important;;
-}
-
-ul.pagination {
-    --bs-pagination-bg: #E0A458;
-    --bs-pagination-color: var(--bs-link-color);
-    --bs-pagination-border-width: 1px;
-    --bs-pagination-border-color: #162723;
-    --bs-pagination-border-radius: 0.375rem;
-    --bs-pagination-hover-color: var(--bs-link-hover-color);
-    --bs-pagination-hover-bg: #e9ecef;
-    --bs-pagination-hover-border-color: #dee2e6;
-    --bs-pagination-focus-color: var(--bs-link-hover-color);
-    --bs-pagination-focus-bg: #e9ecef;
-    --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
-    --bs-pagination-active-color: #162723;
-    --bs-pagination-active-bg: #8C9E88;
-    --bs-pagination-active-border-color: #162723;
-    --bs-pagination-disabled-color: #6c757d;
-    --bs-pagination-disabled-bg: #E0A458;
-    --bs-pagination-disabled-border-color: #162723;
-
 }

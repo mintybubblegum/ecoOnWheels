@@ -38,24 +38,11 @@ h2{
     color: #162723!important;
 }
 
-h3 {
-    margin-top: 12px!important;
-    margin-bottom: 0!important;
-    font-weight: 600;
-}
-
-.form-label {
-    margin-top: 0.8rem;
-    margin-bottom: 0.1rem;
-}
-
 a{
     text-decoration: none!important;
     color: #162723!important;
     
 }
-
-
 
 img {
     width: 80%;
@@ -90,15 +77,6 @@ img {
     font-weight: bolder;
 }
 
-form {
-    width:320px;
-	padding:12px;
-	border-radius:10px;
-	margin:auto;
-	background-color:#8C9E88;
-    color: #162723;
-}
-
 .formActions{
     background-color: transparent;
 }
@@ -113,41 +91,6 @@ form {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-}
-
-.formControl { 
-    display: block;
-    width: 80%; 
-    padding: 0.3rem 0.75rem;
-    font-size: 0.9rem;
-    font-weight: 500;
-    line-height: 1.6;
-    color: #212529;
-    background-color: rgba(140, 158, 136, 0.7);;
-    background-clip: padding-box;
-    border: 1px solid #162723;
-    appearance: none;
-    border-radius: 0.375rem;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-form-label {
-    padding-top: 50px;
-}
-
-.containerTitle{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: #E0A458;
-    width: 80%;
-    text-align: center ;
-    height: auto;
-    padding:5px;
-	border-radius:10px;
-	margin: 12px;;
-    color: #162723;
-
 }
 
 .tripDetails {
