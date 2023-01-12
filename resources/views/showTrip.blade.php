@@ -4,11 +4,11 @@
     
     <img class="imgDestinationShow" src="{{$trip->imgDestination}}" alt="Destination Image">
     <div class="boxDestinationShow" >
-        <h3>{{$trip->date}}</h3>
+        <h3 class=dateShow >{{$trip->date}}</h3>
     </div>
     <br>
     
-    <div class="tripDetails">
+    <div class="tripDetailsShow">
         <div class="timeDetails">
             <div class="departureTime">{{$trip->departureTime}}</div>
             <div class="arrivalTime">{{$trip->arrivalTime}}</div>
@@ -22,8 +22,12 @@
         </div>
     </div>
         <div class="detailsContainer">
-            <h4 class="costDetails"> Cost per passenger: {{$trip->price}}€</h4>
-            <h4 class="seatsDetails"> Seats available: {{$trip->seats}}</h4>  
+            <h4 class="costDetails"> Cost per passenger: 
+                <p>{{$trip->price}}€</p>
+            </h4>
+            <h4 class="seatsDetails"> Seats available:
+                <p>{{$trip->seats}}</p>
+                </h4>  
         </div>
         <div class="driverDetails">
             <h4>Driver's name:  <br>{{$trip->driverName}}</h4> 
