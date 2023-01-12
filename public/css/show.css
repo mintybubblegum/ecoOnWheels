@@ -1,6 +1,5 @@
 body {
     background-color: #162723;
-    
 }
 
 main {
@@ -17,6 +16,7 @@ main {
     align-items: center;
     width: 80%;
 }
+
 .boxDestinationShow{
     display: flex;
     flex-direction: column;
@@ -25,7 +25,6 @@ main {
     background-color: #E0A458;
     width: 80%;
     height: auto;
-    /*padding:1px;*/
 	border-radius:0 0 10px 10px;
 	margin:auto;
     color: #162723;
@@ -44,20 +43,6 @@ main {
     border-radius: 15px 15px 0 0;
 }*/
 
-/*.tripDetails {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: #8C9E88;
-    width: 80%;
-    height: 200px;
-	border-radius:10px;
-	margin: 12px;
-    color: #162723;
-    list-style: none;
-
-}*/
-
 .tripDetailsShow {
     background-color: #8C9E88;
     display: grid;
@@ -68,7 +53,7 @@ main {
     grid-template-rows: 1fr;
     grid-column-gap: 10px;
     grid-row-gap: 0px;
-    }
+}
 
 div.timeDetails {
     margin: 5px;
@@ -81,13 +66,15 @@ div.timeDetails {
 div.departureTime {
     grid-area: 1 / 1 / 2 / 2;
     align-items: start;
-    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 div.arrivalTime { 
     grid-area: 2 / 1 / 3 / 2;
-    align-self: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-top: -5px;
 }
 
 div.addressDetails {
@@ -99,15 +86,16 @@ div.addressDetails {
 }
 
 div.origin {
-    align-items: flex-start;
-    margin-top: 15px;
-    grid-area: 1 / 1 / 2 / 2; 
+    justify-self: start;
+    grid-area: 1 / 1 / 2 / 2;
+    margin-top: 5px;
 }
 
 div.destination { 
     grid-row-end: 5;
     place-content: center;
-    grid-area: 2 / 1 / 3 / 2;  
+    grid-area: 2 / 1 / 3 / 2;
+    margin-bottom: 10px;
 }
 
 div.imgLeafLine { 
@@ -119,25 +107,22 @@ div.imgLeafLine {
     width: 50px;
     flex-shrink: 0;
     height: calc(13px);
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 
 .detailsContainer {
-    /*display: flex;
-    width: 80%;*/
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
-    grid-column-gap: 5px;
+    grid-column-gap: 2px;
     grid-row-gap: 0px;
     align-content: space-between;
+    grid-area: 1 / 1 / 2 / 2;
 }
-
-div.detailsContainer { grid-area: 1 / 1 / 2 / 2; }
 
 .costDetails {
     background-color: #8C9E88;
-    width: 80%;
+    width: 75%;
     height: auto;
     padding: 12px;
 	border-radius:10px;
@@ -148,9 +133,14 @@ div.detailsContainer { grid-area: 1 / 1 / 2 / 2; }
     margin-left: 37px;
 }
 
+.priceShow {
+    margin-left: 37px;
+    font-size: x-large;
+}
+
 .seatsDetails {
     background-color: #8C9E88;
-    width: 80%;
+    width: 75%;
     height: auto;
     padding:12px;
 	border-radius:10px;
@@ -159,6 +149,13 @@ div.detailsContainer { grid-area: 1 / 1 / 2 / 2; }
     font-weight: bold;
     font-size: 16px;
     margin-right: 80px;
+}
+
+.seatsShow {
+    margin-left: 50px;
+    font-size: x-large;
+    font-weight: bolder;
+    margin-bottom: 5px;
 }
 
 div.driverDetails {
@@ -174,6 +171,21 @@ div.driverDetails {
     color: #162723;
 }
 
+.driverNameTitle {
+    font-size: 16px;
+}
+
+.driverName {
+
+}
+
+.driverNumberTitle {
+
+}
+
+.driverNumber {
+
+}
 .imgDriver{
     width: 20%;
     border-radius: 15px;

@@ -22,17 +22,22 @@
         </div>
     </div>
         <div class="detailsContainer">
-            <h4 class="costDetails"> Cost per passenger: 
-                <p>{{$trip->price}}€</p>
+            <h4 class="costDetails"> Cost per passenger: <br><br>
+                <p class="priceShow">{{$trip->price}}€</p>
             </h4>
-            <h4 class="seatsDetails"> Seats available:
-                <p>{{$trip->seats}}</p>
+            <h4 class="seatsDetails"> Seats available:<br><br><br>
+                <p class="seatsShow">{{$trip->seats}}</p>
                 </h4>  
         </div>
         <div class="driverDetails">
-            <h4>Driver's name:  <br>{{$trip->driverName}}</h4> 
-            <h4>Number phone: <br>{{$trip->driverPhone}}</h4> 
-            <img class="imgDriver" src="{{$trip->driverImg}}" alt="Driver Image">
+            <h4 class="driverNameTitle">Driver's name:  <br>
+            <p class="driverName">{{$trip->driverName}}
+            </h4> 
+            <h4 class="driverNumberTitle">Number phone: <br>
+            <p class="driverNumber">{{$trip->driverPhone}}
+        </h4> 
+            <!-- <img class="imgDriver" src="{{$trip->driverImg}}" alt="Driver Image"> -->
+            <img class="imgDriver" src="{{ asset('./public/images/driver1.jpg') }}" alt="Driver Image">
         </div>
             <div class="preferences"> 
                 <h4>Preferences:</h4>
