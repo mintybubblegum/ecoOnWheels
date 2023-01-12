@@ -1,6 +1,7 @@
 body {
     background-color: #162723;
-    
+    margin: 0;
+    font-family: "Inter", sans-serif;
 }
 
 main {
@@ -31,22 +32,24 @@ a.nav-link {
     background-size: 100%;
 } */
 
-.createTitle {
+h2.createTitle {
     margin-top: 10px;
-    text-align: center;
+    text-align: center!important;
     font-weight: bold;
+    font-size: 20px;
     color: #162723!important;
     text-transform: uppercase;
 }
 
 .topTitle {
     margin-top: 12px!important;
+    font-weight: bold;
 }
 
 h3 {
     margin-top: 35px!important;
     margin-bottom: 0!important;
-    font-weight: 700;
+    font-weight: bold!important;
 }
 
 a{
@@ -55,13 +58,26 @@ a{
     
 }
 
+.containerTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #E0A458;
+    width: 100%;
+    text-align: center;
+    height: auto;
+    padding: 2px;
+	margin: 12px;
+    color: #162723;
+}
+
 /* STARTS FORMS */
 
 form {
     width:320px;
+    margin-top: 20px;
 	padding:12px 20px 12px 20px;
 	border-radius:10px;
-	/* margin:auto; */
 	background-color:#8C9E88;
     color: #162723;
 }
@@ -91,6 +107,7 @@ form {
 .formControl { 
     display: block;
     width: 90%; 
+    margin-top: -0.5rem;
     padding: 0.3rem 0.75rem;
     font-size: 0.9rem;
     font-weight: 500;
@@ -104,22 +121,11 @@ form {
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.containerTitle{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: #E0A458;
-    width: 100%;
-    text-align: center;
-    height: auto;
-    padding: 5px;
-	margin: 12px;
-    color: #162723;
-}
-
 #text {
     text-align: center;
 }
+
+/* START BUTTONS */
 
 div.buttons{
     margin: 12px;
@@ -131,79 +137,10 @@ div.buttons{
     margin: 3px;
 }
 
-.list {
-    width: 100%;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
-.cardHome {
-    margin:15px;
-    max-width: 120rem;
-    width: 100%;
-    justify-content: center;
-    background-color: #8C9E88;
-    border-radius:  15px 15px 15px 15px;
-    font-size: 0.2rem;
-}
 
-.card-body {
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: 3fr 1fr 1fr 2fr;
-    color:#162723;
-    
-}
 
-@media (min-width:768px){
-    .list{
-        width:60%
-    }
-}
 
-.date {
-    margin-left:7px ;
-    margin-top: 5px;
-    color:#162723;
-    grid-column: 1;
-    grid-row: 3/4;
-}
-.price {
-    grid-column: 4;
-    grid-row: 1;
-    margin-left: 30px;
-    margin-top: 60px;
-}
-.departureTime {
-    margin-top:20px ;
-    grid-column: 2;
-    grid-row: 1;
-}
-.arrivalTime {
-    margin-top: 60px;
-    grid-column: 2;
-    grid-row: 1;  
-}
-.originCity {
-    margin-top: 20px;
-    grid-column: 3;
-    grid-row: 1;
-    margin-left: 20px;
-}
-.destinationCity {
-    grid-column: 3;
-    grid-row: 1; 
-    margin-left: 20px;
-    margin-top: 60px;
-}
-.energyType {
-    margin-top:5px ;
-    grid-column: 2/4;
-    grid-row: 3;
-    text-transform:uppercase;
-    font-weight: bold;
-}
 
 .buttonHome {
     font-size: 12px !important;

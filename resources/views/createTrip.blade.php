@@ -108,10 +108,12 @@
             <label class="form-label">User email</label>
             <input style="margin-bottom: 15px" type="text" class="formControl" name="userEmail">
         </div>
-        <div class="buttons">
-            <a href="{{route('home')}}"><button type ="submit" value="create" class="btn btn-success addButton">Add</button></a>
-            <button type="reset" value="reset" class="btn btn-danger resetButton">Reset</button>
-        </div>
     </form>
+
+    <div class="buttons">
+        <button type="reset" value="reset" class="btn btn-danger resetButton">Reset</button>
+        <a href="{{route('home')}}"><button type ="submit" value="create" class="btn btn-success createButton">Create</button></a>
+    </div>
+
     
 @endsection
