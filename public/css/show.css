@@ -59,7 +59,7 @@ h3 {
 
 div.timeDetails {
     margin: 5px;
-    align-items: center;
+    /*align-items: center;*/
     display: grid;
     grid-template-rows: 1fr 1fr;
     position: relative;
@@ -67,11 +67,11 @@ div.timeDetails {
 
 div.departureTime {
     grid-area: 1 / 1 / 2 / 2;
-    margin-top: 1px;
+    justify-content: start;
 }
 
 div.arrivalTime { 
-    grid-area: 2 / 1 / 3 / 2;  
+    grid-area: 2 / 1 / 3 / 2;
 }
 
 div.addressDetails {
@@ -79,6 +79,7 @@ div.addressDetails {
     display: grid;
     grid-template-rows: 1fr 1fr ;
     position: relative;
+    align-items: flex-end;
 }
 
 div.origin {
@@ -96,11 +97,7 @@ div.destination {
 div.imgLeafLine { 
     grid-template-rows: 1fr;
     display: grid;
-    /*margin-top: 20px;
-    margin-bottom: -20px;*/
     position: relative;
-    /*flex-direction: column;*/
-    /*justify-content: flex-start;*/
     -webkit-box-align: center;
     align-content: flex-end;
     width: 50px;
@@ -108,10 +105,30 @@ div.imgLeafLine {
     height: calc(13px);
 }
 
-.seatsDetailsContainer {
-    display: flex;
-    width: 82%;
-    
+.detailsContainer {
+    /*display: flex;
+    width: 80%;*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 0px;
+    align-content: space-between;
+}
+
+div.detailsContainer { grid-area: 1 / 1 / 2 / 2; }
+
+.costDetails {
+    background-color: #8C9E88;
+    width: 80%;
+    height: auto;
+    padding: 12px;
+	border-radius:10px;
+	margin: 12px;
+    color: #162723;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 37px;
 }
 
 .seatsDetails {
@@ -123,17 +140,8 @@ div.imgLeafLine {
 	margin: 12px;;
     color: #162723;
     font-weight: bold;
-}
-
-.preferences {
-    background-color: #8C9E88;
-    width: 80%;
-    height: auto;
-    padding:12px;
-	border-radius:10px;
-	margin: 12px;;
-    color: #162723;
-
+    font-size: 16px;
+    margin-right: 80px;
 }
 
 div.driverDetails {
@@ -149,13 +157,23 @@ div.driverDetails {
     color: #162723;
 }
 
-#text {
-    text-align: center;
-}
-
 .imgDriver{
     width: 20%;
     border-radius: 15px;
+}
+
+.preferences {
+    background-color: #8C9E88;
+    width: 80%;
+    height: auto;
+    padding:12px;
+	border-radius:10px;
+	margin: 12px;;
+    color: #162723;
+}
+
+#text {
+    text-align: center;
 }
 
 

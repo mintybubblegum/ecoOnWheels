@@ -21,8 +21,8 @@
             <div class="destination">{{$trip->destinationAddress}}, CP: {{$trip->destinationPostcode}}. {{$trip->destinationCity}}-{{$trip->destinationCountry}}</div>
         </div>
     </div>
-        <div class="seatsDetailsContainer">
-            <h4 class="seatsDetails"> Cost per passenger: {{$trip->price}}€</h4>
+        <div class="detailsContainer">
+            <h4 class="costDetails"> Cost per passenger: {{$trip->price}}€</h4>
             <h4 class="seatsDetails"> Seats available: {{$trip->seats}}</h4>  
         </div>
         <div class="driverDetails">
