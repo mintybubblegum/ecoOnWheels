@@ -178,7 +178,9 @@ div.buttons{
     font-weight: bold;
 }
 
-.formActions {
+form.formActionsHome{
+    margin-top: 0;
+    width: 100%;
     background-color: transparent;
     display: flex;
     justify-content: flex-end;

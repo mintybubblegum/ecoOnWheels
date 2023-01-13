@@ -52,19 +52,20 @@
             <h6 class="energyType"> {{ $trip->energyType }} </h6>
         </div>
         @if (Auth::check() && Auth::user()->isAdmin)
-            <form class=formActions action="{{ route('deleteTrip', ['id'=>$trip->id]) }}" method="POST">
+            <form class=formActionsHome action="{{ route('deleteTrip', ['id'=>$trip->id]) }}" method="POST">
                 @method('delete')
                 @csrf
                 <a href="{{route ('editTrip',['id'=>$trip->id])}}">
-                    <button type="button" class=buttonHome>Edit</button>
+                    <button type="button" class="buttonHome">Edit</button>
                 </a>
                 <button type="submit" onclick="return confirm ('Are you sure you want to delete this trip to {{ $trip->destinationCity }}?')" class=buttonHome>Delete</button>
+                <div>
+                    <button class="buttonHome" id="booking"><a href="{{route('booking',$trip->id)}}">Booking</a></button>
+                    <button class="buttonHome" id="unbooking"><a href="{{route('unbooking',$trip->id)}}">Unbooking</a></button>
+                </div>  
             </form>  
         @endif 
-        <div>
-            <button class="text-warning" id="booking"><a href="{{route('booking',$trip->id)}}">Booking</a></button>
-            <button class="text-warning" id="unbooking"><a href="{{route('unbooking',$trip->id)}}">Unbooking</a></button>
-        </div>             
+                   
     </section>
     
     @endforeach
