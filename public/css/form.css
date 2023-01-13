@@ -131,16 +131,37 @@ div.buttons{
     margin: 12px;
     display: flex;
     justify-content: center;
+    padding: 20px;
+    gap: 40px;
 }
 
 .btn {
     margin: 3px;
 }
 
+.createButton {
+    font-size: 12px !important;
+    font-weight: bold !important;
+    color: #162723;
+    background: #E0A458!important;
+    border-color: #E0A458!important;
+    border-radius: 13px!important;
+    text-transform: uppercase;
+    width: 75px;
+    height: 35px;
+}
 
-
-
-
+.resetButton {
+    font-size: 12px !important;
+    font-weight: bold !important;
+    color: #162723;
+    background: rgba(224, 164, 88, 0.34)!important;
+    border-color: #E0A458!important ;
+    border-radius: 13px!important;
+    text-transform: uppercase;
+    width: 75px;
+    height: 35px;
+}
 
 .buttonHome {
     font-size: 12px !important;

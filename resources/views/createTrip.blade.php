@@ -101,18 +101,14 @@
         </div>
         <h3>Others details</h3>
         <div>
-            <label class="form-label">Top Journeys </label>
-            <input type="text" class="formControl" name="topJourneys">
-        </div>
-        <div>
             <label class="form-label">User email</label>
             <input style="margin-bottom: 15px" type="text" class="formControl" name="userEmail">
         </div>
     </form>
 
     <div class="buttons">
-        <button type="reset" value="reset" class="btn btn-danger resetButton">Reset</button>
-        <a href="{{route('home')}}"><button type ="submit" value="create" class="btn btn-success createButton">Create</button></a>
+        <button type="reset" value="reset" class="btn resetButton">Reset</button>
+        <a href="{{route('home')}}"><button type ="submit" value="create" class="btn createButton">Create</button></a>
     </div>
 
     
