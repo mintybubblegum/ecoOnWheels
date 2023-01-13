@@ -34,6 +34,7 @@ h2{
     color: #162723!important;
 }
 
+<<<<<<< HEAD
 h3 {
     margin-top: 12px!important;
     margin-bottom: 0!important;
@@ -41,13 +42,23 @@ h3 {
 }
 
 
+=======
+>>>>>>> develop
 a{
     text-decoration: none!important;
     color: #162723!important;
     
 }
 
+<<<<<<< HEAD
 
+=======
+img {
+    width: 80%;
+    height: 50%;
+    border-radius: 15px 15px 0 0;
+}
+>>>>>>> develop
 
 .imgDestination{
     display: flex;
@@ -80,6 +91,7 @@ a{
     background-color: transparent;
 }
 
+<<<<<<< HEAD
 .containerTitle{
     display: flex;
     flex-direction: row;
@@ -89,12 +101,142 @@ a{
     text-align: center ;
     height: auto;
     padding:5px;
+=======
+.formstyle {
+    box-sizing: content-box;
+    width: 100%;
+    margin: 15px;
+    background-color: #8C9E88;
+    color: #8C9E88;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.tripDetails {
+    display: flex;
+    flex-direction: row;
+    background-color: #8C9E88;
+    width: 80%;
+    height: auto;
+    padding:12px;
+	border-radius:10px;
+	margin: 12px;;
+    color: #162723;
+    list-style: none;
+}
+
+div.timeDetails {
+    margin: 5px;
+    display: grid;
+    grid-template-rows: 0.75fr 0.2fr 1fr;
+    position: relative;
+}
+
+div.departureTime {
+    grid-area: 1 / 1 / 2 / 2; 
+}
+
+div.arrivalTime { 
+    grid-area: 2 / 1 / 3 / 2;  
+}
+
+div.addressDetails {
+    margin: 5px;
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    position: relative;
+}
+
+div.origin {
+    margin-top: 15px;
+    grid-area: 1 / 1 / 2 / 2; 
+}
+
+div.destination { 
+    grid-area: 2 / 1 / 3 / 2;  
+}
+
+.imgLeafLine { 
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    align-items: center;
+    min-height: 300px;
+    width: 50px;
+    flex-shrink: 0;
+    height: calc(13px);
+}
+
+.seatsDetailsContainer {
+    display: flex;
+    width: 82%;
+    
+}
+
+.seatsDetails {
+    background-color: #8C9E88;
+    width: 80%;
+    height: auto;
+    padding:12px;
+	border-radius:10px;
+	margin: 12px;;
+    color: #162723;
+    font-weight: bold;
+}
+
+.preferences {
+    background-color: #8C9E88;
+    width: 80%;
+    height: auto;
+    padding:12px;
+>>>>>>> develop
 	border-radius:10px;
 	margin: 12px;;
     color: #162723;
 
 }
 
+<<<<<<< HEAD
+=======
+div.driverDetails {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8C9E88;
+    width: 80%;
+    height: auto;
+    padding:12px;
+	border-radius:10px;
+	margin: 12px;;
+    color: #162723;
+}
+
+#text {
+    text-align: center;
+}
+
+.imgDriver{
+    width: 20%;
+    border-radius: 15px;
+}
+
+
+.vehicleDetails {
+    background-color: #8C9E88;
+    width: 80%;
+    height: auto;
+    padding:12px;
+	border-radius:10px;
+	margin: 12px;;
+    color: #162723;
+}
+
+>>>>>>> develop
 div.buttons{
     margin: 12px;
     display: flex;

@@ -2,12 +2,12 @@
 
 @section('content')
     <div class="containerTitle">
-        <h2>Edit Trip</h2>
+        <h2 class="editTitle">Edit Trip</h2>
     </div>
     <form action="{{route ('updateTrip',$trip->id)}}" method="post">
         @method('PATCH')
         @csrf
-        <h3>Origin details</h3>
+        <h3 class="topTitle">Origin details</h3>
         <div>
             <label class="form-label">Origin Address</label>
             <input value="{{$trip->originAddress}}" type="text" class="formControl" name="originAddress">
@@ -101,18 +101,12 @@
         </div>
         <h3>Others details</h3>
         <div>
-            <label class="form-label">Top Journeys </label>
-            <input value="{{$trip->topJourneys}}" type="text" class="formControl" name="topJourneys">
-        </div>
-        <div>
             <label class="form-label">User email</label>
-            <input value="{{$trip->userEmail}}" type="text" class="formControl" name="userEmail">
-        </div>
-        <div class="buttons">
-            <a href="{{route('home')}}"><button type ="submit" value="update" class="btn btn-success">Save</button></a>
-            <button type="reset" value="reset" class="btn btn-danger">Reset</button>
-            <a href="{{route('home')}}"><button type="button" class="btn btn-primary">Return</button></a>
+            <input style="margin-bottom: 15px" value="{{$trip->userEmail}}" type="text" class="formControl" name="userEmail">
         </div>
     </form>
-
+    <div class="buttons">
+            <button type="reset" value="reset" class="btn resetButton">Reset</button>
+            <a href="{{route('home')}}"><button type ="submit" value="create" class="btn createButton">Create</button></a>
+    </div>
 @endsection
