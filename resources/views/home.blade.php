@@ -60,8 +60,13 @@
                 </a>
                 <button type="submit" onclick="return confirm ('Are you sure you want to delete this trip to {{ $trip->destinationCity }}?')" class=buttonHome>Delete</button>
             </form>  
-        @endif              
+        @endif 
+        <div>
+            <button class="text-warning" id="booking"><a href="{{route('booking',$trip->id)}}">Booking</a></button>
+            <button class="text-warning" id="unbooking"><a href="{{route('unbooking',$trip->id)}}">Unbooking</a></button>
+        </div>             
     </section>
+    
     @endforeach
 </div>
 <div>

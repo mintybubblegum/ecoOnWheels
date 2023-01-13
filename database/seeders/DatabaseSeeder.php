@@ -164,7 +164,15 @@ class DatabaseSeeder extends Seeder
             'isAdmin' => false,
         ]); 
 
-        User::factory(5)->create(); 
+        User::factory(5)->create();
+
+        User::factory()
+            ->has(Trip::factory()->count(5))
+            ->create();
+
+        Trip::factory()
+            ->has(User::factory()->count(5))
+            ->create();
         
         // \App\Models\User::factory(10)->create();
 

@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Trip;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+
+
 
 
 
@@ -96,6 +100,25 @@ class TripController extends Controller
     public function destroy($id)
     {
         Trip::destroy($id);
+        return redirect()->route('home');
+    }
+    public function booking($id){
+
+        $trip = Trip::find($id);
+        $user = User::find(Auth::id());
+
+        $user->trip()->attach($trip);
+
+        return redirect()->route('home');
+    }
+
+    public function unbooking($id){
+
+        $trip = Trip::find($id);
+        $user = User::find(auth::id());
+
+        $user->trip()->detach($trip);
+
         return redirect()->route('home');
     }
 }

@@ -35,4 +35,8 @@ class Trip extends Model
         'topJourneys',
         'userEmail',
     ];
+    
+    public function user(){
+        return $this->belongsToMany(User::class);	
+    }
 }
