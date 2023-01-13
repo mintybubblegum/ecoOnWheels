@@ -14,7 +14,8 @@ main {
 .imgDestinationShow{
     display:flex;
     align-items: center;
-    width: 80%;
+    width: 100%;
+    height: 200px;
 }
 
 .boxDestinationShow{
@@ -23,9 +24,8 @@ main {
     justify-content: center;
     align-items: center;
     background-color: #E0A458;
-    width: 80%;
+    width: 100%;
     height: auto;
-	border-radius:0 0 10px 10px;
 	margin:auto;
     color: #162723;
 }
@@ -37,16 +37,15 @@ main {
     font-weight: bold;
 }
 
-/*img {
-    width: 80%;
-    height: 50%;
-    border-radius: 15px 15px 0 0;
-}*/
+img {
+    width: 65%;
+    height: 70%;
+}
 
 .tripDetailsShow {
     background-color: #8C9E88;
     display: grid;
-    width: 80%;
+    width: 95%;
     border-radius:10px;
     margin: 12px;
     grid-template-columns: 1fr 0.5fr 2fr;
@@ -66,7 +65,7 @@ div.timeDetails {
 div.departureTime {
     grid-area: 1 / 1 / 2 / 2;
     align-items: start;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     margin-left: 10px;
 }
 
@@ -74,7 +73,7 @@ div.arrivalTime {
     grid-area: 2 / 1 / 3 / 2;
     margin-bottom: 20px;
     margin-left: 10px;
-    margin-top: -5px;
+    margin-top: 15px;
 }
 
 div.addressDetails {
@@ -88,14 +87,14 @@ div.addressDetails {
 div.origin {
     justify-self: start;
     grid-area: 1 / 1 / 2 / 2;
-    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 div.destination { 
     grid-row-end: 5;
     place-content: center;
     grid-area: 2 / 1 / 3 / 2;
-    margin-bottom: 10px;
+    margin-top: 5px;
 }
 
 div.imgLeafLine { 
@@ -107,7 +106,7 @@ div.imgLeafLine {
     width: 50px;
     flex-shrink: 0;
     height: calc(13px);
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 }
 
 .detailsContainer {
@@ -120,50 +119,46 @@ div.imgLeafLine {
     grid-area: 1 / 1 / 2 / 2;
 }
 
-.costDetails {
+.costDetails, .seatsDetails {
+    display:flex;
     background-color: #8C9E88;
-    width: 75%;
+    width: 89%;
     height: auto;
     padding: 12px;
 	border-radius:10px;
 	margin: 12px;
     color: #162723;
-    font-weight: bold;
-    font-size: 16px;
-    margin-left: 37px;
+
 }
 
-.priceShow {
-    margin-left: 37px;
-    font-size: x-large;
+.costDetailsTitle, .seatsDetailsTitle {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    font-size: medium;
+    text-align: center;
 }
 
-.seatsDetails {
-    background-color: #8C9E88;
-    width: 75%;
-    height: auto;
-    padding:12px;
-	border-radius:10px;
-	margin: 12px;;
-    color: #162723;
-    font-weight: bold;
-    font-size: 16px;
-    margin-right: 80px;
+.seatsDetailsTitle {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    font-size: medium;
+    text-align: center;
+    margin-left: 15px;
 }
 
-.seatsShow {
-    margin-left: 50px;
-    font-size: x-large;
-    font-weight: bolder;
-    margin-bottom: 5px;
+
+.priceShow, .seatsShow {
+    font-size: larger;
 }
 
-div.driverDetails {
+.driverDetails {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #8C9E88;
-    width: 80%;
+    width: 95%;
     height: auto;
     padding:12px;
 	border-radius:10px;
@@ -171,21 +166,15 @@ div.driverDetails {
     color: #162723;
 }
 
-.driverNameTitle {
+.driverNameTitle, .driverNumberTitle, .energyTitle, .numberplateTitle, .vehicleTitle {
     font-size: 16px;
+    margin-top: 5px;
 }
 
-.driverName {
-
+.driverName, .driverNumber, .descriptionPreferences, .energyType, .numberplate, .vehicleType {
+    font-size: larger;
 }
 
-.driverNumberTitle {
-
-}
-
-.driverNumber {
-
-}
 .imgDriver{
     width: 20%;
     border-radius: 15px;
@@ -193,7 +182,7 @@ div.driverDetails {
 
 .preferences {
     background-color: #8C9E88;
-    width: 80%;
+    width: 95%;
     height: auto;
     padding:12px;
 	border-radius:10px;
@@ -201,14 +190,16 @@ div.driverDetails {
     color: #162723;
 }
 
-#text {
-    text-align: center;
+.preferencesTitle {
+    font-size: medium;
 }
-
 
 .vehicleDetails {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: #8C9E88;
-    width: 80%;
+    width: 95%;
     height: auto;
     padding:12px;
 	border-radius:10px;
@@ -216,96 +207,6 @@ div.driverDetails {
     color: #162723;
 }
 
-div.buttons{
-    margin: 12px;
-    display: flex;
-    justify-content: center;
-}
-
-.btn {
-    margin: 3px;
-}
-.list {
-    width: 100%;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.cardHome {
-    margin:15px;
-    max-width: 120rem;
-    width: 100%;
-    justify-content: center;
-    background-color: #8C9E88;
-    border-radius:  15px 15px 15px 15px;
-    font-size: 0.2rem;
-}
-
-.card-body {
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: 3fr 1fr 1fr 2fr;
-    color:#162723;
-    
-}
-
-@media (min-width:768px){
-    .list{
-        width:60%
-    }
-}
-.imgCityDestination {
-    border-radius:  15px 15px 15px 15px;
-    grid-column: 1;
-}
-.date {
-    margin-left:7px ;
-    margin-top: 5px;
-    color:#162723;
-    grid-column: 1;
-    grid-row: 3/4;
-}
-.price {
-    grid-column: 4;
-    grid-row: 1;
-    margin-left: 30px;
-    margin-top: 60px;
-}
-.departureTime {
-    margin-top:20px ;
-    grid-column: 2;
-    grid-row: 1;
-}
-.arrivalTime {
-    margin-top: 60px;
-    grid-column: 2;
-    grid-row: 1;  
-}
-.originCity {
-    margin-top: 20px;
-    grid-column: 3;
-    grid-row: 1;
-    margin-left: 20px;
-}
-.destinationCity {
-    grid-column: 3;
-    grid-row: 1; 
-    margin-left: 20px;
-    margin-top: 60px;
-}
-.energyType {
-    margin-top:5px ;
-    grid-column: 2/4;
-    grid-row: 3;
-    text-transform:uppercase;
-    font-weight: bold;
-}
-
-.formActions {
-    background-color: transparent;
-    display: flex;
-    justify-content: flex-end;
-}
 
 .buttonHome {
     font-size: 12px !important;
@@ -316,34 +217,4 @@ div.buttons{
     border-color: #E0A458 ;
     border-radius: 10px;
     margin: 3px;
-}
-
-p.small.text-muted {
-    --bs-text-opacity: 1;
-    color: #E0A458 !important;
-}
-
-a.page-link{
-    color: #162723 !important;;
-}
-
-ul.pagination {
-    --bs-pagination-bg: #E0A458;
-    --bs-pagination-color: var(--bs-link-color);
-    --bs-pagination-border-width: 1px;
-    --bs-pagination-border-color: #162723;
-    --bs-pagination-border-radius: 0.375rem;
-    --bs-pagination-hover-color: var(--bs-link-hover-color);
-    --bs-pagination-hover-bg: #e9ecef;
-    --bs-pagination-hover-border-color: #dee2e6;
-    --bs-pagination-focus-color: var(--bs-link-hover-color);
-    --bs-pagination-focus-bg: #e9ecef;
-    --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
-    --bs-pagination-active-color: #162723;
-    --bs-pagination-active-bg: #8C9E88;
-    --bs-pagination-active-border-color: #162723;
-    --bs-pagination-disabled-color: #6c757d;
-    --bs-pagination-disabled-bg: #E0A458;
-    --bs-pagination-disabled-border-color: #162723;
-
 }
