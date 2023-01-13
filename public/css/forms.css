@@ -21,18 +21,7 @@ a.nav-link {
     color: #e0a458!important;
 }
 
-/* span.navbar-toggler-icon {
-    display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
-    vertical-align: middle;
-    color: #E0A458;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-} */
-
-h2.createTitle {
+h2.createTitle, .editTitle {
     margin-top: 10px;
     text-align: center!important;
     font-weight: bold;
@@ -55,7 +44,6 @@ h3 {
 a{
     text-decoration: none!important;
     color: #162723!important;
-    
 }
 
 .containerTitle{
@@ -78,6 +66,7 @@ form {
     margin-top: 20px;
 	padding:12px 20px 12px 20px;
 	border-radius:10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.73);
 	background-color:#8C9E88;
     color: #162723;
 }
@@ -121,10 +110,6 @@ form {
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-#text {
-    text-align: center;
-}
-
 /* START BUTTONS */
 
 div.buttons{
@@ -135,10 +120,6 @@ div.buttons{
     gap: 40px;
 }
 
-.btn {
-    margin: 3px;
-}
-
 .createButton {
     font-size: 12px !important;
     font-weight: bold !important;
@@ -146,6 +127,7 @@ div.buttons{
     background: #E0A458!important;
     border-color: #E0A458!important;
     border-radius: 13px!important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.73);
     text-transform: uppercase;
     width: 75px;
     height: 35px;
@@ -158,23 +140,8 @@ div.buttons{
     background: rgba(224, 164, 88, 0.34)!important;
     border-color: #E0A458!important ;
     border-radius: 13px!important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.73);
     text-transform: uppercase;
     width: 75px;
     height: 35px;
-}
-
-.buttonHome {
-    font-size: 12px !important;
-    background: #E0A458;
-    color: #162723;
-    width: 52px;
-    height: 25px;
-    border-color: #E0A458 ;
-    border-radius: 10px;
-    margin: 3px;
-}
-
-p.small.text-muted {
-    --bs-text-opacity: 1;
-    color: #E0A458 !important;
 }
