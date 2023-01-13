@@ -36,8 +36,7 @@
             <h4 class="driverNumberTitle">Number phone: <br>
             <p class="driverNumber">{{$trip->driverPhone}}
         </h4> 
-            <!-- <img class="imgDriver" src="{{$trip->driverImg}}" alt="Driver Image"> -->
-            <img class="imgDriver" src="{{ asset('./public/images/driver1.jpg') }}" alt="Driver Image">
+            <img class="imgDriver" src="{{$trip->driverImg}}" alt="Driver Image"> 
         </div>
             <div class="preferences"> 
                 <h4>Preferences:</h4>
