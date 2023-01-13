@@ -31,7 +31,7 @@
 
 <div>
     @if (Auth::check() && Auth::user()->isAdmin)
-        <button class="btn btn-primary" style="color: white">
+        <button class="buttonHome" style="color: white">
         <a href="{{route('createTrip')}}">Create New Trip</a>
         </button>
     @endif
