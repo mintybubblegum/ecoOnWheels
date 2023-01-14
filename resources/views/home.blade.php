@@ -55,11 +55,14 @@
             <form class=formActionsHome action="{{ route('deleteTrip', ['id'=>$trip->id]) }}" method="POST">
                 @method('delete')
                 @csrf
-                <a href="{{route ('editTrip',['id'=>$trip->id])}}">
-                    <button type="button" class="buttonHome">Edit</button>
-                </a>
-                <button type="submit" onclick="return confirm ('Are you sure you want to delete this trip to {{ $trip->destinationCity }}?')" class=buttonHome>Delete</button>
-                <div>
+                <div class="adminButtons">
+                    <a href="{{route ('editTrip',['id'=>$trip->id])}}">
+                        <img src="../images/editPencil.png" alt="Pencil button">
+                    </a>
+                    <button type="submit" onclick="return confirm ('Are you sure you want to delete this trip to {{ $trip->destinationCity }}?')" class="deleteButton"><img src="../images/deleteBin.png" alt="Bin button"></button>
+                </div>
+                
+                <div class="bookingButtons">
                     <button class="buttonHome" id="booking"><a href="{{route('booking',$trip->id)}}">Booking</a></button>
                     <button class="buttonHome" id="unbooking"><a href="{{route('unbooking',$trip->id)}}">Unbooking</a></button>
                 </div>  

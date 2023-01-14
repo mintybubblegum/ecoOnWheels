@@ -183,7 +183,40 @@ form.formActionsHome{
     width: 100%;
     background-color: transparent;
     display: flex;
+    justify-content: space-between;
+}
+
+div.adminButtons{
+    display: flex;
     justify-content: flex-end;
+    width: 60%;
+}
+
+.deleteButton {
+    color: transparent!important;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: flex;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing:unset;
+    background-color: transparent!important;
+    margin: 0em;
+    padding: 1px 8px 0 8px;
+    border-width: 0px;
+    border-color: transparent!important;
+    border-image: initial;
+}
+
+div.bookingButtons{
+    display: flex;
+    justify-self: flex-end;
+    align-self:flex-end;
 }
 
 .buttonHome {
