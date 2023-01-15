@@ -1,24 +1,11 @@
-body {
-    background-color: #162723;
-}
-
-main {
-    background-color: #162723;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.imgDestinationShow{
+.imgDestinationShow {
     display:flex;
     align-items: center;
     width: 100%;
-    height: 200px;
+    height: auto;
 }
 
-.boxDestinationShow{
+.boxDestinationShow {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,20 +13,15 @@ main {
     background-color: #E0A458;
     width: 100%;
     height: auto;
-	margin:auto;
+	margin: auto;
     color: #162723;
 }
 
-.dateShow{
+.dateShow {
     margin-top: 12px;
     margin-bottom: 10px;
     font-size: 16px;
     font-weight: bold;
-}
-
-img {
-    width: 65%;
-    height: 70%;
 }
 
 .tripDetailsShow {
@@ -54,7 +36,7 @@ img {
     grid-row-gap: 0px;
 }
 
-div.timeDetails {
+.timeDetailsShow {
     margin: 5px;
     align-items: center;
     display: grid;
@@ -62,42 +44,21 @@ div.timeDetails {
     position: relative;
 }
 
-div.departureTime {
+.departureTimeShow {
     grid-area: 1 / 1 / 2 / 2;
     align-items: start;
     margin-bottom: 15px;
     margin-left: 10px;
 }
 
-div.arrivalTime { 
+.arrivalTimeShow { 
     grid-area: 2 / 1 / 3 / 2;
     margin-bottom: 20px;
     margin-left: 10px;
     margin-top: 15px;
 }
 
-div.addressDetails {
-    margin: 5px;
-    display: grid;
-    grid-template-rows: 1fr 1fr ;
-    position: relative;
-    align-items: flex-end;
-}
-
-div.origin {
-    justify-self: start;
-    grid-area: 1 / 1 / 2 / 2;
-    margin-bottom: 5px;
-}
-
-div.destination { 
-    grid-row-end: 5;
-    place-content: center;
-    grid-area: 2 / 1 / 3 / 2;
-    margin-top: 5px;
-}
-
-div.imgLeafLine { 
+.imgLeafLineShow1 { 
     grid-template-rows: 1fr;
     position: relative;
     display: grid;
@@ -109,7 +70,33 @@ div.imgLeafLine {
     margin-bottom: 60px;
 }
 
-.detailsContainer {
+.imgLeafLineShow2 {
+    width: 65%;
+    height: 70%;
+}
+
+.addressDetailsShow {
+    margin: 5px;
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    position: relative;
+    align-items: flex-end;
+}
+
+.originShow {
+    justify-self: start;
+    grid-area: 1 / 1 / 2 / 2;
+    margin-bottom: 5px;
+}
+
+.destinationShow { 
+    grid-row-end: 5;
+    place-content: center;
+    grid-area: 2 / 1 / 3 / 2;
+    margin-top: 5px;
+}
+
+.detailsContainerShow {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
@@ -119,102 +106,83 @@ div.imgLeafLine {
     grid-area: 1 / 1 / 2 / 2;
 }
 
-.costDetails, .seatsDetails {
+.costDetailsShow, .seatsDetailsShow {
     display:flex;
     background-color: #8C9E88;
     width: 89%;
     height: auto;
     padding: 12px;
-	border-radius:10px;
+	border-radius: 10px;
 	margin: 12px;
     color: #162723;
 
 }
 
-.costDetailsTitle, .seatsDetailsTitle {
+.costDetailsTitleShow, .seatsDetailsTitleShow {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     font-size: medium;
     text-align: center;
 }
 
-.seatsDetailsTitle {
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    font-size: medium;
-    text-align: center;
+.seatsDetailsTitleShow {
     margin-left: 15px;
 }
-
 
 .priceShow, .seatsShow {
     font-size: larger;
 }
 
-.driverDetails {
+.driverDetailsShow, .vehicleDetailsShow {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #8C9E88;
     width: 95%;
     height: auto;
-    padding:12px;
-	border-radius:10px;
-	margin: 12px;;
+    padding: 12px;
+	border-radius: 10px;
+	margin: 12px;
     color: #162723;
 }
 
-.driverNameTitle, .driverNumberTitle, .energyTitle, .numberplateTitle, .vehicleTitle {
+.driverNameTitleShow, .driverNumberTitleShow, .energyTitleShow, .numberplateTitleShow, .vehicleTitleShow {
     font-size: 16px;
     margin-top: 5px;
 }
 
-.driverName, .driverNumber, .descriptionPreferences, .energyType, .numberplate, .vehicleType {
+.driverNameShow, .driverNumberShow, .descriptionPreferencesShow, .energyTypeShow, .numberplateShow, .vehicleTypeShow {
     font-size: larger;
 }
 
-.imgDriver{
+.imgDriverShow {
     width: 20%;
     border-radius: 15px;
 }
 
-.preferences {
+.preferencesShow {
     background-color: #8C9E88;
     width: 95%;
     height: auto;
-    padding:12px;
-	border-radius:10px;
-	margin: 12px;;
+    padding: 12px;
+	border-radius: 10px;
+	margin: 12px;
     color: #162723;
 }
 
-.preferencesTitle {
+.preferencesTitleShow {
     font-size: medium;
 }
 
-.vehicleDetails {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #8C9E88;
-    width: 95%;
-    height: auto;
-    padding:12px;
-	border-radius:10px;
-	margin: 12px;;
-    color: #162723;
-}
-
-
-.buttonHome {
-    font-size: 12px !important;
+.buttonReserveShow {
+    text-decoration: none !important;
+    font-size: medium;
     background: #E0A458;
     color: #162723;
-    width: 52px;
-    height: 25px;
-    border-color: #E0A458 ;
+    width: 95%;
+    height: auto;
+    border-color: #E0A458;
     border-radius: 10px;
     margin: 3px;
-}
+} 
