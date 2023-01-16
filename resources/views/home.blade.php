@@ -1,10 +1,37 @@
 @extends('layouts.app')
 
+@section('title','EcoOnWheels')
+
 @section('content')
+
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        @foreach ($sliders as $key => $item)
+            <div class="carousel-item {{ $key == 0 ? ' active' : ''}}">
+                @if ($item->imgDestination)
+                <img src="{{ asset("$item->imgDestination") }}" class="d-block w-100" alt="City destination picture">
+                @endif
+                <div class="carousel-caption d-none d-md-block">
+                <h5>{{$item->originCity}}->{{$item->destinationCity}}</h5>
+                <p>{{$item->date}}</p>
+                </div>
+            </div>
+        @endforeach
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div> 
+
 
 <div>
     @if (Auth::check() && Auth::user()->isAdmin)
-        <button class="btn btn-primary" style="color: white">
+        <button class="buttonHome" style="color: white">
         <a href="{{route('createTrip')}}">Create New Trip</a>
         </button>
     @endif
@@ -25,16 +52,25 @@
             <h6 class="energyType"> {{ $trip->energyType }} </h6>
         </div>
         @if (Auth::check() && Auth::user()->isAdmin)
-            <form class=formActions action="{{ route('deleteTrip', ['id'=>$trip->id]) }}" method="POST">
+            <form class=formActionsHome action="{{ route('deleteTrip', ['id'=>$trip->id]) }}" method="POST">
                 @method('delete')
                 @csrf
-                <a href="{{route ('editTrip',['id'=>$trip->id])}}">
-                    <button type="button" class=buttonHome>Edit</button>
-                </a>
-                <button type="submit" onclick="return confirm ('Are you sure you want to delete this trip to {{ $trip->destinationCity }}?')" class=buttonHome>Delete</button>
+                <div class="adminButtons">
+                    <a href="{{route ('editTrip',['id'=>$trip->id])}}">
+                        <img src="../images/editPencil.png" alt="Pencil button">
+                    </a>
+                    <button type="submit" onclick="return confirm ('Are you sure you want to delete this trip to {{ $trip->destinationCity }}?')" class="deleteButton"><img src="../images/deleteBin.png" alt="Bin button"></button>
+                </div>
+                
+                <div class="bookingButtons">
+                    <button class="buttonHome" id="booking"><a href="{{route('booking',$trip->id)}}">Booking</a></button>
+                    <button class="buttonHome" id="unbooking"><a href="{{route('unbooking',$trip->id)}}">Unbooking</a></button>
+                </div>  
             </form>  
-        @endif              
+        @endif 
+                   
     </section>
+    
     @endforeach
 </div>
 <div>

@@ -33,3 +33,6 @@ Route::get('/edit/{id}', [TripController::class, 'edit'])->name('editTrip')->mid
 Route::patch('/trip/{id}', [TripController::class, 'update'])->name('updateTrip')->middleware('isadmin', 'auth');
 
 Route::get('/show/{id}', [TripController::class, 'show'])->name('showTrip');
+
+Route::get('/booking/{id}', [TripController::class, 'booking'])->name('booking')->middleware('auth');
+Route::get('/unbooking/{id}', [TripController::class, 'unbooking'])->name('unbooking')->middleware('auth');
