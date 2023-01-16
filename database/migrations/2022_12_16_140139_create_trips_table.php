@@ -31,7 +31,7 @@ return new class extends Migration
             $table->string('driverName');
             $table->string('driverSurname');
             $table->string('driverPhone');
-            $table->string('driverImg');
+            $table->string('driverImg')->nullable(); //que no sea necesaria foto para crear viaje
             $table->string('energyType');
             $table->string('numberplate');
             $table->string('vehicleType');
@@ -40,7 +40,7 @@ return new class extends Migration
             $table->time('arrivalTime');
             $table->boolean('topJourneys');
             $table->string('userEmail');
-
+            $table->boolean('ifBooked')->default(0); //que por defecto esté disponible
             
             $table->timestamps();
         });

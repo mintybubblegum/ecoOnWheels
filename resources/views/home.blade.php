@@ -61,14 +61,24 @@
                     </a>
                     <button type="submit" onclick="return confirm ('Are you sure you want to delete this trip to {{ $trip->destinationCity }}?')" class="deleteButton"><img src="../images/deleteBin.png" alt="Bin button"></button>
                 </div>
-                
+                @endif
+
+                <!-- <div class="bookingButtons">
+                    @if ($trip->date_time > now())
+                        @if ($trip->ifBooked === "1")
+                            <button class="buttonHome"><a href="{{route('unbooking',$trip->id)}}">Unbook</a></button>
+                        @else
+                            <button class="buttonHome"><a href="{{route('booking',$trip->id)}}">Book</a></button>
+                        @endif
+                    @endif
+                </div>-->
+
                 <div class="bookingButtons">
-                    <button class="buttonHome" id="booking"><a href="{{route('booking',$trip->id)}}">Booking</a></button>
-                    <button class="buttonHome" id="unbooking"><a href="{{route('unbooking',$trip->id)}}">Unbooking</a></button>
-                </div>  
+                    <button onclick="buttonColor()" class="bookBtn" id="bookBtn"><a href="{{route('booking',$trip->id)}}">Book</a></button>
+                    <button class="unbookedBtn" id="unbookBtn"><a href="{{route('unbooking',$trip->id)}}">Unbooked</a></button>
+                </div> 
             </form>  
-        @endif 
-                   
+
     </section>
     
     @endforeach

@@ -1,6 +1,7 @@
 body {
     background-color: #162723;
 }
+
 main {
     background-color: #162723;
     width: 100%;
@@ -9,32 +10,39 @@ main {
     justify-content: center;
     align-items: center;
 }
+
 .bgHeader {
     background-color: #162723!important;
 }
+
 a.nav-link {
     color: #E0A458!important;
 }
+
 div#carouselExampleCaptions.carousel.slide {
     width: 50vw;
     display: flex;
     justify-content: center;
 }
+
 h2{
     margin-bottom: 15px;
     text-align: center;
     font-weight: 700;
     color: #162723!important;
 }
+
 h3 {
     margin-top: 12px!important;
     margin-bottom: 0!important;
     font-weight: 600;
 }
+
 a{
     text-decoration: none!important;
     color: #162723!important;
 }
+
 .imgDestination{
     display: flex;
     flex-direction: column;
@@ -48,19 +56,24 @@ a{
     margin:auto;
     color: #162723;
 }
+
 .card{
     margin:5px;
     background-color: #8C9E88;
 }
+
 .card-title {
     color:#162723;
 }
+
 .price {
     font-weight: bolder;
 }
+
 .formActions{
     background-color: transparent;
 }
+
 .containerTitle{
     display: flex;
     flex-direction: row;
@@ -74,20 +87,24 @@ a{
     margin: 12px;;
     color: #162723;
 }
+
 div.buttons{
     margin: 12px;
     display: flex;
     justify-content: center;
 }
+
 .btn {
     margin: 3px;
 }
+
 .list {
     width: 100%;
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .cardHome {
     margin:15px;
     max-width: 120rem;
@@ -97,21 +114,25 @@ div.buttons{
     border-radius:  15px 15px 15px 15px;
     font-size: 0.2rem;
 }
+
 .card-body {
     max-width: 100%;
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 2fr;
     color:#162723;
 }
+
 @media (min-width:768px){
     .list{
         width:60%
     }
 }
+
 .imgCityDestination {
     border-radius:  15px 15px 15px 15px;
     grid-column: 1;
 }
+
 .date {
     margin-left:7px ;
     margin-top: 5px;
@@ -119,34 +140,40 @@ div.buttons{
     grid-column: 1;
     grid-row: 3/4;
 }
+
 .price {
     grid-column: 4;
     grid-row: 1;
     margin-left: 30px;
     margin-top: 60px;
 }
+
 .departureTime {
     margin-top:20px ;
     grid-column: 2;
     grid-row: 1;
 }
+
 .arrivalTime {
     margin-top: 60px;
     grid-column: 2;
     grid-row: 1;
 }
+
 .originCity {
     margin-top: 20px;
     grid-column: 3;
     grid-row: 1;
     margin-left: 20px;
 }
+
 .destinationCity {
     grid-column: 3;
     grid-row: 1;
     margin-left: 20px;
     margin-top: 60px;
 }
+
 .energyType {
     margin-top:5px ;
     grid-column: 2/4;
@@ -154,6 +181,7 @@ div.buttons{
     text-transform:uppercase;
     font-weight: bold;
 }
+
 form.formActionsHome{
     margin-top: 0;
     width: 100%;
@@ -161,11 +189,13 @@ form.formActionsHome{
     display: flex;
     justify-content: space-between;
 }
+
 div.adminButtons{
     display: flex;
     justify-content: flex-end;
     width: 60%;
 }
+
 .deleteButton {
     color: transparent!important;
     letter-spacing: normal;
@@ -186,28 +216,50 @@ div.adminButtons{
     border-color: transparent!important;
     border-image: initial;
 }
+
 div.bookingButtons{
     display: flex;
     justify-self: flex-end;
     align-self:flex-end;
 }
-.buttonHome {
+
+.buttonHome, .bookBtn {
     font-size: 12px !important;
-    background: #E0A458;
+    background-color: #E0A458;
     color: #162723;
-    width: 52px;
+    width: 60px;
     height: 25px;
     border-color: #E0A458 ;
     border-radius: 10px;
     margin: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.73);
 }
+
+.unbookedBtn {
+    font-size: 12px !important;
+    background-color: #E0A458;
+    color: #162723;
+    width: 85px;
+    height: 25px;
+    border-color: #E0A458 ;
+    border-radius: 10px;
+    margin: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.73);
+}
+
 p.small.text-muted {
     --bs-text-opacity: 1;
     color: #E0A458 !important;
 }
+
 a.page-link{
     color: #162723 !important;;
 }
+
 ul.pagination {
     --bs-pagination-bg: #E0A458;
     --bs-pagination-color: var(--bs-link-color);
