@@ -101,7 +101,7 @@
         </div>
         <h3>Others details</h3>
         <div>
-            <label class="form-label">User email</label>
+            <label class="form-label">Driver email</label>
             <input style="margin-bottom: 15px" value="{{$trip->userEmail}}" type="text" class="formControl" name="userEmail">
         </div>
     </form>
