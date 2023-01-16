@@ -83,21 +83,6 @@ img.d-block.w-100 {
     background-color: transparent;
 }
 
-.containerTitle{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: #E0A458;
-    width: 80%;
-    text-align: center ;
-    height: auto;
-    padding:5px;
-	border-radius:10px;
-	margin: 12px;;
-    color: #162723;
-
-}
-
 div.buttons{
     margin: 12px;
     display: flex;
