@@ -152,7 +152,7 @@ div.buttons{
     background-color: transparent;
 }
 
-.containerLoginTitle, .containerRegisterTitle{
+.containerLoginTitle, .containerRegisterTitle {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -164,6 +164,16 @@ div.buttons{
     color: #162723;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+.containerLogoutTitle {
+    background-color: #162723 !important;
+    color: #E0A458 !important;
+    border:none !important;
+}
+.logoutTittle {
+    color:#E0A458 !important;
+    padding-left: 0px !important;
 }
 
 .loginForm, .registerForm {
