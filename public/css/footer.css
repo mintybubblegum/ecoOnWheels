@@ -1,0 +1,31 @@
+.mainFooter {
+    background-color: #162723;
+}
+.mainFooter {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: baseline;
+}
+.homeIcon {
+    justify-self: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.addIcon {
+    justify-self: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.suitcaseIcon {
+    justify-self: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}

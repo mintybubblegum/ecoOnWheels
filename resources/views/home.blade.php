@@ -28,14 +28,13 @@
     </button>
 </div> 
 
-
-<div>
+<!-- <div>
     @if (Auth::check() && Auth::user()->isAdmin)
         <button class="buttonHome" style="color: white">
         <a href="{{route('createTrip')}}">Create New Trip</a>
         </button>
     @endif
-</div>
+</div> -->
 
 <div class="list" >
     @foreach ($trips as $trip)
