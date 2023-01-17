@@ -47,8 +47,61 @@ class TripController extends Controller
      */
     public function store(Request $request)
     {
-        $trip = request()->except('_token');
-        Trip::create($trip);
+        $request->validate([
+            'imgDestination' => 'nullable',
+            'originAddress' => 'required',
+            'originPostcode' => 'required',
+            'originCity' => 'required',
+            'originCountry' => 'required',
+            'destinationAddress' => 'required',
+            'destinationPostcode' => 'required',
+            'destinationCity' => 'required',
+            'destinationCountry' => 'required',
+            'preferences' => 'required',
+            'seats' => 'required | numeric',
+            'price' => 'required | numeric',
+            'driverName' => 'required',
+            'driverSurname' => 'required',
+            'driverPhone' => 'required',
+            'driverImg' => 'nullable',
+            'energyType' => 'required',
+            'numberplate' => 'required',
+            'vehicleType' => 'required',
+            'date' => 'required | date',
+            'departureTime' => 'required',
+            'arrivalTime' => 'required',
+            'topJourneys' => 'nullable',
+        ]);
+        
+        $trip = new Trip;
+        $trip->imgDestination = $request->imgDestination;
+        $trip->originAddress = $request->originAddress;
+        $trip->originPostcode = $request->originPostcode;
+        $trip->originCity = $request->originCity;
+        $trip->originCountry = $request->originCountry;
+        $trip->destinationAddress = $request->destinationAddress;
+        $trip->destinationPostcode = $request->destinationPostcode;
+        $trip->destinationCity = $request->destinationCity;
+        $trip->destinationCountry = $request->destinationCountry;
+        $trip->preferences = $request->preferences;
+        $trip->seats = $request->seats;
+        $trip->price = $request->price;
+        $trip->driverName = $request->driverName;
+        $trip->driverSurname = $request->driverSurname;
+        $trip->driverPhone = $request->driverPhone;
+        $trip->driverImg = $request->driverImg;
+        $trip->energyType = $request->energyType;
+        $trip->numberplate = $request->numberplate;
+        $trip->vehicleType = $request->vehicleType;
+        $trip->date = $request->date;
+        $trip->departureTime = $request->departureTime;
+        $trip->arrivalTime = $request->arrivalTime;
+        $trip->topJourneys = $request->topJourneys;
+
+        $trip->save();
+
+        /* $trip = request()->except('_token'); */
+        /* Trip::create($trip); */
 
         return redirect()->route('home');
     }

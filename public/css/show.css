@@ -1,0 +1,184 @@
+.imgDestinationShow {
+    display:flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+} 
+
+.boxDestinationShow {
+    display: flex;
+    justify-content: center;
+    background-color: #E0A458;
+    width: 100%;
+    height: auto;
+    color: #162723;
+}
+
+.dateShow {
+    margin: 2% !important;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.tripDetailsShow {
+    background-color: #8C9E88;
+    display: grid;
+    width: 95%;
+    border-radius:10px;
+    margin: 12px;
+    grid-template-columns: 1fr 0.5fr 2fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+}
+
+.timeDetailsShow {
+    margin: 5px;
+    align-items: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+}
+
+.departureTimeShow {
+    grid-area: 1 / 1 / 2 / 2;
+    align-items: start;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+.arrivalTimeShow { 
+    grid-area: 2 / 1 / 3 / 2;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.imgLeafLineShow1 { 
+    grid-template-rows: 1fr;
+    position: relative;
+    display: grid;
+    -webkit-box-align: center;
+    align-self: center;
+    width: 50px;
+    flex-shrink: 0;
+    height: calc(13px);
+    margin-bottom: 60px;
+}
+
+.imgLeafLineShow2 {
+    width: 65%;
+    height: 70%;
+}
+
+.addressDetailsShow {
+    margin: 5px;
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    position: relative;
+    align-items: flex-end;
+}
+
+.originShow {
+    justify-self: start;
+    grid-area: 1 / 1 / 2 / 2;
+    margin-bottom: 5px;
+}
+
+.destinationShow { 
+    grid-row-end: 5;
+    place-content: center;
+    grid-area: 2 / 1 / 3 / 2;
+    margin-top: 5px;
+}
+
+.detailsContainerShow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 2px;
+    grid-row-gap: 0px;
+    align-content: space-between;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.costDetailsShow, .seatsDetailsShow {
+    display:flex;
+    background-color: #8C9E88;
+    width: 89%;
+    height: auto;
+    padding: 12px;
+	border-radius: 10px;
+	margin: 12px;
+    color: #162723;
+
+}
+
+.costDetailsTitleShow, .seatsDetailsTitleShow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: medium;
+    text-align: center;
+}
+
+.seatsDetailsTitleShow {
+    margin-left: 15px;
+}
+
+.priceShow, .seatsShow {
+    font-size: larger;
+}
+
+.driverDetailsShow, .vehicleDetailsShow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8C9E88;
+    width: 95%;
+    height: auto;
+    padding: 12px;
+	border-radius: 10px;
+	margin: 12px;
+    color: #162723;
+}
+
+.driverNameTitleShow, .driverNumberTitleShow, .energyTitleShow, .numberplateTitleShow, .vehicleTitleShow {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.driverNameShow, .driverNumberShow, .descriptionPreferencesShow, .energyTypeShow, .numberplateShow, .vehicleTypeShow {
+    font-size: larger;
+}
+
+.imgDriverShow {
+    width: 20%;
+    border-radius: 15px;
+}
+
+.preferencesShow {
+    background-color: #8C9E88;
+    width: 95%;
+    height: auto;
+    padding: 12px;
+	border-radius: 10px;
+	margin: 12px;
+    color: #162723;
+}
+
+.preferencesTitleShow {
+    font-size: medium;
+}
+
+.buttonReserveShow {
+    text-decoration: none !important;
+    font-size: medium;
+    background: #E0A458;
+    color: #162723;
+    width: 95%;
+    height: auto;
+    border-color: #E0A458;
+    border-radius: 10px;
+    margin: 3px;
+} 

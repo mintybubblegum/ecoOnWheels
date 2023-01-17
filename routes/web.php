@@ -18,17 +18,15 @@ use App\Http\Controllers\TripController;
 */
 
 Auth::routes();
+
 Route::get('/', [TripController::class,'index'])->name('home');
 Route::get('/home', [TripController::class,'index']);
 
-//D del CRUD
 Route::delete('/delete/{id}', [TripController::class, 'destroy'])->name('deleteTrip')->middleware('isadmin', 'auth');
 
-//C del CRUD
 Route::get('/create', [TripController::class, 'create'])->name('createTrip')->middleware('isadmin', 'auth');
 Route::post('/', [TripController::class, 'store'])->name('storeTrip')->middleware('isadmin', 'auth');
 
-//U del CRUD
 Route::get('/edit/{id}', [TripController::class, 'edit'])->name('editTrip')->middleware('isadmin', 'auth');
 Route::patch('/trip/{id}', [TripController::class, 'update'])->name('updateTrip')->middleware('isadmin', 'auth');
 
