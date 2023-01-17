@@ -59,7 +59,9 @@
         </div>
         <div>
             <label class="form-label">Preferences</label>
-            <input type="text" value="{{$trip->preferences}}" class="formControl" name="preferences"></textarea>
+            <textarea type="text" class="formControlTextarea" name="preferences">
+                {{$trip->preferences}}
+            </textarea>
         </div>
         <div>
             <label class="form-label">Seats</label>
@@ -101,12 +103,13 @@
         </div>
         <h3>Others details</h3>
         <div>
-            <label class="form-label">Driver email</label>
-            <input style="margin-bottom: 15px" value="{{$trip->userEmail}}" type="text" class="formControl" name="userEmail">
+            <label class="form-label">Top Journeys</label>
+            <input value="{{$trip->topJourneys}}" type="text" class="formControl" name="topJourneys">
+        </div>
+        <div class="buttons">
+            <button type="reset" value="reset" class="btn resetButton">Reset</button>
+            <a href="{{route('home')}}"><button type ="submit" value="update" class="btn createButton">Save</button></a>
         </div>
     </form>
-    <div class="buttons">
-            <button type="reset" value="reset" class="btn resetButton">Reset</button>
-            <a href="{{route('home')}}"><button type ="submit" value="create" class="btn createButton">Create</button></a>
-    </div>
+    
 @endsection

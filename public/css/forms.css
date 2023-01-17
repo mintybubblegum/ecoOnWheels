@@ -18,7 +18,7 @@ main {
 }
 
 a.nav-link {
-    color: #e0a458!important;
+    color: #E0A458!important;
 }
 
 h2.createTitle, .editTitle {
@@ -34,7 +34,6 @@ h2.createTitle, .editTitle {
     margin-top: 12px!important;
     font-weight: bold;
 }
-
 h3 {
     margin-top: 35px!important;
     margin-bottom: 0!important;
@@ -55,19 +54,18 @@ a{
     text-align: center;
     height: auto;
     padding: 2px;
-	margin: 12px;
+    margin: 12px;
     color: #162723;
 }
 
 /* STARTS FORMS */
-
 form {
     width:320px;
     margin-top: 20px;
-	padding:12px 20px 12px 20px;
-	border-radius:10px;
+    padding:12px 20px 12px 20px;
+    border-radius:10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.73);
-	background-color:#8C9E88;
+    background-color:#8C9E88;
     color: #162723;
 }
 
@@ -93,16 +91,16 @@ form {
     align-items: center;
 }
 
-.formControl { 
+.formControl, .formControlTextarea {
     display: block;
-    width: 90%; 
+    width: 90%;
     margin-top: -0.5rem;
     padding: 0.3rem 0.75rem;
     font-size: 0.9rem;
     font-weight: 500;
     line-height: 1.6;
     color: #212529;
-    background-color: rgba(140, 158, 136, 0.7);;
+    background-color: rgba(140, 158, 136, 0.7) !important;
     background-clip: padding-box;
     border: 1px solid #162723;
     appearance: none;
@@ -111,7 +109,6 @@ form {
 }
 
 /* START BUTTONS */
-
 div.buttons{
     margin: 12px;
     display: flex;
@@ -145,8 +142,8 @@ div.buttons{
     width: 75px;
     height: 35px;
 }
-/* STARTS LOGIN */
 
+/* STARTS LOGIN */
 .cardLogin, .cardRegister {
     background-color: transparent;
 }
@@ -170,6 +167,7 @@ div.buttons{
     color: #E0A458 !important;
     border:none !important;
 }
+
 .logoutTittle {
     color:#E0A458 !important;
     padding-left: 0px !important;
@@ -177,7 +175,7 @@ div.buttons{
 
 .loginForm, .registerForm {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .loginButton, .registerButton {
@@ -191,4 +189,9 @@ div.buttons{
     text-transform: uppercase;
     width: 75px;
     height: 35px;
-} 
+}
+
+.invalidFeedback {
+    font-weight: bolder;
+    color: darkred;
+}

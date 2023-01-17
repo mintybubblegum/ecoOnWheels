@@ -21,18 +21,18 @@ class DatabaseSeeder extends Seeder
             'originAddress' => 'Av Santa Lucia 36',
             'originPostcode' => '29008',
             'originCity' => 'Malaga',
-            'destinationCountry' => 'Spain',
+            'originCountry' => 'Spain',
             'destinationAddress' => 'Av Barcelona 25',
             'destinationPostcode' => '08010',
             'destinationCity' => 'Barcelona',
             'destinationCountry' => 'Spain',
-            'preferences' => 'All people',
+            'preferences' => 'Family friendly',
             'seats' => '3',
             'price' => '80.00',
-            'driverName'=> 'Noa',
+            'driverName'=> 'Michael',
             'driverSurname'=> 'Trujillo',
             'driverPhone'=> '608132564',
-            'driverImg'=> 'https://drive.google.com/file/d/1AUo4h9huVVksNbiTldqgOWHyAEu13YBa/view?usp=share_link',
+            'driverImg'=> 'https://images.pexels.com/photos/4890259/pexels-photo-4890259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
             'energyType' => 'Electric Car',
             'numberplate'=> '1235YXZ',
             'vehicleType'=> 'Ford fiesta',
@@ -40,7 +40,6 @@ class DatabaseSeeder extends Seeder
             'departureTime' => '12:30',
             'arrivalTime' => '23:00',
             'topJourneys'=>0,
-            'userEmail'=> 'noa@hotmail.com',
         ]);
 
         Trip::factory()->create([
@@ -48,7 +47,7 @@ class DatabaseSeeder extends Seeder
             'originAddress' => 'Paseo del Prado, 47',
             'originPostcode' => '28009',
             'originCity' => 'Madrid',
-            'destinationCountry' => 'Spain',
+            'originCountry' => 'Spain',
             'destinationAddress' => 'Av Peris i Valero, 32',
             'destinationPostcode' => '46030',
             'destinationCity' => 'Valencia',
@@ -67,14 +66,13 @@ class DatabaseSeeder extends Seeder
             'departureTime' => '09:00',
             'arrivalTime' => '12:40',
             'topJourneys'=>1,
-            'userEmail'=> 'bea@gmail.com',
         ]);
         Trip::factory()->create([
             'imgDestination' => 'https://content.r9cdn.net/rimg/dimg/3b/c2/b4c4bfb9-city-27138-55689ae0.jpg?width=1366&height=768&xhint=1902&yhint=1090&crop=true',
             'originAddress' => 'Estacion Maria Zambrano',
             'originPostcode' => '29001',
             'originCity' => 'Malaga',
-            'destinationCountry' => 'Spain',
+            'originCountry' => 'Spain',
             'destinationAddress' => 'Av Juan Pablo II,45',
             'destinationPostcode' => '18014',
             'destinationCity' => 'Granada',
@@ -93,7 +91,6 @@ class DatabaseSeeder extends Seeder
             'departureTime' => '14:00',
             'arrivalTime' => '15:35',
             'topJourneys'=>0,
-            'userEmail'=> 'Luismarquez235@gmail.com',
         ]);
 
         Trip::factory()->create([
@@ -101,7 +98,7 @@ class DatabaseSeeder extends Seeder
             'originAddress' => 'Av Carlos Haya, 45',
             'originPostcode' => '29010',
             'originCity' => 'Malaga',
-            'destinationCountry' => 'Spain',
+            'originCountry' => 'Spain',
             'destinationAddress' => 'Plaza de Armas',
             'destinationPostcode' => '41001',
             'destinationCity' => 'Seville',
@@ -120,7 +117,6 @@ class DatabaseSeeder extends Seeder
             'departureTime' => '16:00',
             'arrivalTime' => '18:25',
             'topJourneys'=>1,
-            'userEmail'=> 'Maribelpg@hotmail.es',
         ]);
 
         Trip::factory()->create([
@@ -128,7 +124,7 @@ class DatabaseSeeder extends Seeder
             'originAddress' => 'C.c. Marina Banus',
             'originPostcode' => '29660',
             'originCity' => 'Marbella',
-            'destinationCountry' => 'Spain',
+            'originCountry' => 'Spain',
             'destinationAddress' => 'Estacion Maria Zambrano',
             'destinationPostcode' => '29001',
             'destinationCity' => 'Malaga',
@@ -147,10 +143,9 @@ class DatabaseSeeder extends Seeder
             'departureTime' => '07:00',
             'arrivalTime' => '08:00',
             'topJourneys'=> 1,
-            'userEmail'=> 'Jmarteavilchez@gmail.com',
         ]);
 
-        Trip::factory(10)->create();
+        Trip::factory()->create();
 
         User::factory()->create([
             'name' => 'admin',
