@@ -3,6 +3,7 @@ body {
     margin: 0;
     font-family: "Inter", sans-serif;
 }
+
 main {
     background-color: #162723;
     width: 100%;
@@ -11,12 +12,15 @@ main {
     justify-content: center;
     align-items: center;
 }
+
 .bgHeader {
     background-color: #162723!important;
 }
+
 a.nav-link {
     color: #E0A458!important;
 }
+
 h2.createTitle, .editTitle {
     margin-top: 10px;
     text-align: center!important;
@@ -25,6 +29,7 @@ h2.createTitle, .editTitle {
     color: #162723!important;
     text-transform: uppercase;
 }
+
 .topTitle {
     margin-top: 12px!important;
     font-weight: bold;
@@ -34,10 +39,12 @@ h3 {
     margin-bottom: 0!important;
     font-weight: bold!important;
 }
+
 a{
     text-decoration: none!important;
     color: #162723!important;
 }
+
 .containerTitle{
     display: flex;
     flex-direction: row;
@@ -50,6 +57,7 @@ a{
     margin: 12px;
     color: #162723;
 }
+
 /* STARTS FORMS */
 form {
     width:320px;
@@ -60,14 +68,17 @@ form {
     background-color:#8C9E88;
     color: #162723;
 }
+
 .form-label {
     margin-top: 0.8rem;
 }
+
 .formActions{
     background-color: transparent;
     display: flex;
     justify-content: flex-end;
 }
+
 .formstyle {
     box-sizing: content-box;
     width: 100%;
@@ -79,7 +90,8 @@ form {
     justify-content: center;
     align-items: center;
 }
-.formControl {
+
+.formControl, .formControlTextarea {
     display: block;
     width: 90%;
     margin-top: -0.5rem;
@@ -88,13 +100,14 @@ form {
     font-weight: 500;
     line-height: 1.6;
     color: #212529;
-    background-color: rgba(140, 158, 136, 0.7);;
+    background-color: rgba(140, 158, 136, 0.7) !important;
     background-clip: padding-box;
     border: 1px solid #162723;
     appearance: none;
     border-radius: 0.375rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
 /* START BUTTONS */
 div.buttons{
     margin: 12px;
@@ -103,6 +116,7 @@ div.buttons{
     padding: 20px;
     gap: 40px;
 }
+
 .createButton {
     font-size: 12px !important;
     font-weight: bold !important;
@@ -115,6 +129,7 @@ div.buttons{
     width: 75px;
     height: 35px;
 }
+
 .resetButton {
     font-size: 12px !important;
     font-weight: bold !important;
@@ -127,10 +142,12 @@ div.buttons{
     width: 75px;
     height: 35px;
 }
+
 /* STARTS LOGIN */
 .cardLogin, .cardRegister {
     background-color: transparent;
 }
+
 .containerLoginTitle, .containerRegisterTitle {
     display: flex;
     flex-direction: row;
@@ -144,19 +161,23 @@ div.buttons{
     text-transform: uppercase;
     font-weight: bold;
 }
+
 .containerLogoutTitle {
     background-color: #162723 !important;
     color: #E0A458 !important;
     border:none !important;
 }
+
 .logoutTittle {
     color:#E0A458 !important;
     padding-left: 0px !important;
 }
+
 .loginForm, .registerForm {
     display: flex;
     justify-content: center;
 }
+
 .loginButton, .registerButton {
     font-size: 12px !important;
     font-weight: bold !important;
@@ -168,4 +189,9 @@ div.buttons{
     text-transform: uppercase;
     width: 75px;
     height: 35px;
+}
+
+.invalidFeedback {
+    font-weight: bolder;
+    color: darkred;
 }

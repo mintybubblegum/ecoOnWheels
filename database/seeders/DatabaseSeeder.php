@@ -40,7 +40,6 @@ class DatabaseSeeder extends Seeder
             'departureTime' => '12:30',
             'arrivalTime' => '23:00',
             'topJourneys'=>0,
-            'userEmail'=> 'noa@hotmail.com',
         ]);
 
         Trip::factory()->create([
@@ -67,7 +66,6 @@ class DatabaseSeeder extends Seeder
             'departureTime' => '09:00',
             'arrivalTime' => '12:40',
             'topJourneys'=>1,
-            'userEmail'=> 'bea@gmail.com',
         ]);
         Trip::factory()->create([
             'imgDestination' => 'https://content.r9cdn.net/rimg/dimg/3b/c2/b4c4bfb9-city-27138-55689ae0.jpg?width=1366&height=768&xhint=1902&yhint=1090&crop=true',
@@ -93,7 +91,6 @@ class DatabaseSeeder extends Seeder
             'departureTime' => '14:00',
             'arrivalTime' => '15:35',
             'topJourneys'=>0,
-            'userEmail'=> 'Luismarquez235@gmail.com',
         ]);
 
         Trip::factory()->create([
@@ -120,7 +117,6 @@ class DatabaseSeeder extends Seeder
             'departureTime' => '16:00',
             'arrivalTime' => '18:25',
             'topJourneys'=>1,
-            'userEmail'=> 'Maribelpg@hotmail.es',
         ]);
 
         Trip::factory()->create([
@@ -147,10 +143,9 @@ class DatabaseSeeder extends Seeder
             'departureTime' => '07:00',
             'arrivalTime' => '08:00',
             'topJourneys'=> 1,
-            'userEmail'=> 'Jmarteavilchez@gmail.com',
         ]);
 
-        Trip::factory(10)->create();
+        Trip::factory()->create();
 
         User::factory()->create([
             'name' => 'admin',

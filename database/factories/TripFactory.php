@@ -31,16 +31,15 @@ class TripFactory extends Factory
             'price'=> $this->faker->biasedNumberBetween($min = 1, $max = 300, $function = 'sqrt'),
             'driverName'=> $this->faker->firstName(),
             'driverSurname'=> $this->faker->lastName(),
+            'driverPhone'=> $this->faker->name(),
             'driverImg'=> $this->faker->imageUrl(),
             'energyType'=> $this->faker->name(),
+            'numberplate'=> $this->faker->name(),
             'vehicleType'=> $this->faker->name(),
             'date'=> $this->faker->date($format = 'Y-m-d', $max = 'now'),
             'departureTime'=> $this->faker->time($format = 'H:i', $max = 'now'),
             'arrivalTime'=> $this->faker->time($format = 'H:i', $max = 'now'),
             'topJourneys'=> $this->faker->boolean(),
-            'userEmail'=> $this->faker->email(),
-            'numberplate'=> $this->faker->name(),
-            'driverPhone'=> $this->faker->name(),
         ];
     }
 }

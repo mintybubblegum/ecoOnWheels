@@ -33,8 +33,6 @@ class Trip extends Model
         'departureTime',
         'arrivalTime',
         'topJourneys',
-        'userEmail',
-        'ifBooked',
     ];
     
     public function user(){

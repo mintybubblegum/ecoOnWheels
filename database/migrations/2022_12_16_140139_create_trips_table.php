@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('trips', function (Blueprint $table) {
             $table->id();
 
-            $table->string('imgDestination');
+            $table->string('imgDestination')->nullable();
             $table->string('originAddress');
             $table->string('originPostcode');
             $table->string('originCity');
@@ -31,16 +31,14 @@ return new class extends Migration
             $table->string('driverName');
             $table->string('driverSurname');
             $table->string('driverPhone');
-            $table->string('driverImg')->nullable(); //que no sea necesaria foto para crear viaje
+            $table->string('driverImg')->nullable();
             $table->string('energyType');
             $table->string('numberplate');
             $table->string('vehicleType');
             $table->date('date');
             $table->time('departureTime');
             $table->time('arrivalTime');
-            $table->boolean('topJourneys');
-            $table->string('userEmail');
-            $table->boolean('ifBooked')->default(0); //que por defecto esté disponible
+            $table->boolean('topJourneys')->nullable()->default(0);
             
             $table->timestamps();
         });

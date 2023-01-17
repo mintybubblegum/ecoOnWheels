@@ -7,20 +7,16 @@
 
 .boxDestinationShow {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
     background-color: #E0A458;
     width: 100%;
     height: auto;
-	margin: auto;
     color: #162723;
 }
 
 .dateShow {
-    margin-top: 12px;
-    margin-bottom: 10px;
-    font-size: 16px;
+    margin: 2% !important;
+    font-size: larger;
     font-weight: bold;
 }
 

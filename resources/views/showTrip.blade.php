@@ -4,9 +4,8 @@
     
     <img class="imgDestinationShow" src="{{$trip->imgDestination}}" alt="Destination Image">
     <div class="boxDestinationShow">
-        <h3 class=dateShow >{{$trip->date}}</h3>
-    </div>
-    <br>
+        <h4 class=dateShow >{{$trip->date}}</h4>
+    </div><br>
     
     <div class="tripDetailsShow">
         <div class="timeDetailsShow">
@@ -21,43 +20,47 @@
             <div class="destinationShow">{{$trip->destinationAddress}}, {{$trip->destinationPostcode}}. {{$trip->destinationCity}}-{{$trip->destinationCountry}}</div>
         </div>
     </div>
-        <div class="detailsContainerShow">
-            <div class="costDetailsShow">
+
+    <div class="detailsContainerShow">
+        <div class="costDetailsShow">
             <h4 class="costDetailsTitleShow"> Cost per passenger: <br><br>
                 <p class="priceShow">{{$trip->price}}€</p>
-                </h4>
-            </div>
-            <div class="seatsDetailsShow">
+            </h4>
+        </div>
+        <div class="seatsDetailsShow">
             <h4 class="seatsDetailsTitleShow"> Seats available:<br><br><br>
                 <p class="seatsShow">{{$trip->seats}}</p>
-                </h4>
-            </div>
+            </h4>
         </div>
-        <div class="driverDetailsShow">
+    </div>
+
+    <div class="driverDetailsShow">
         <img class="imgDriverShow" src="{{$trip->driverImg}}" alt="Driver Image">
-            <h4 class="driverNameTitleShow">Driver's name:<br><br>
+        <h4 class="driverNameTitleShow">Driver's name:<br><br>
             <p class="driverNameShow">{{$trip->driverName}} {{$trip->driverSurname}}
-            </h4> 
-            <h4 class="driverNumberTitleShow">Number phone:<br><br> 
+        </h4> 
+        <h4 class="driverNumberTitleShow">Number phone:<br><br> 
             <p class="driverNumberShow">{{$trip->driverPhone}}
-            </h4> 
-        </div>
-            <div class="preferencesShow"> 
-                <h4 class="preferencesTitleShow">Preferences:</h4>
-                <p class="descriptionPreferencesShow">{{$trip->preferences}}</p> 
-            </div> 
-            <div class="vehicleDetailsShow">
-                <h4 class="energyTitleShow">Energy type:<br><br> 
-                <p class="energyTypeShow"> {{$trip->energyType}}</p>
-                </h4>
-                <h4 class="numberplateTitleShow">Numberplate:<br><br> 
-                <p class="numberplateShow">{{$trip->numberplate}}</p>
-                </h4>
-                <h4 class="vehicleTitleShow">Vehicle type:<br><br> 
-                <p class="vehicleTypeShow">{{$trip->vehicleType}}</p>
-                </h4>
-            </div>
+        </h4> 
+    </div>
+
+    <div class="preferencesShow"> 
+        <h4 class="preferencesTitleShow">Preferences:</h4>
+        <p class="descriptionPreferencesShow">{{$trip->preferences}}</p> 
+    </div> 
+
+    <div class="vehicleDetailsShow">
+        <h4 class="energyTitleShow">Energy type:<br><br> 
+            <p class="energyTypeShow"> {{$trip->energyType}}</p>
+        </h4>
+        <h4 class="numberplateTitleShow">Numberplate:<br><br> 
+            <p class="numberplateShow">{{$trip->numberplate}}</p>
+        </h4>
+        <h4 class="vehicleTitleShow">Vehicle type:<br><br> 
+            <p class="vehicleTypeShow">{{$trip->vehicleType}}</p>
+        </h4>
+    </div>
             
-            <button type="button" class=buttonReserveShow><a href="{{route ('home')}}" class=buttonReserveShow>Reserve my seat</a></button>
+    <button type="button" class=buttonReserveShow><a href="{{route ('booking', $trip->id)}}" class=buttonReserveShow>Reserve my seat</a></button>
         
 @endsection
