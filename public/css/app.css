@@ -1,8 +1,6 @@
 body {
     background-color: #162723;
-    
 }
-
 main {
     background-color: #162723;
     width: 100%;
@@ -11,42 +9,32 @@ main {
     justify-content: center;
     align-items: center;
 }
-
 .bgHeader {
     background-color: #162723!important;
 }
-
 a.nav-link {
-    color: #e0a458!important;
+    color: #E0A458!important;
 }
-
 div#carouselExampleCaptions.carousel.slide {
     width: 50vw;
     display: flex;
     justify-content: center;
-
 }
-
 h2{
     margin-bottom: 15px;
     text-align: center;
     font-weight: 700;
     color: #162723!important;
 }
-
 h3 {
     margin-top: 12px!important;
     margin-bottom: 0!important;
     font-weight: 600;
 }
-
-
 a{
     text-decoration: none!important;
     color: #162723!important;
-    
 }
-
 .imgDestination{
     display: flex;
     flex-direction: column;
@@ -56,28 +44,23 @@ a{
     width: 80%;
     height: auto;
     padding:12px;
-	border-radius:0 0 10px 10px;
-	margin:auto;
+    border-radius:0 0 10px 10px;
+    margin:auto;
     color: #162723;
 }
-
 .card{
     margin:5px;
     background-color: #8C9E88;
 }
-
 .card-title {
     color:#162723;
 }
-
 .price {
     font-weight: bolder;
 }
-
 .formActions{
     background-color: transparent;
 }
-
 .containerTitle{
     display: flex;
     flex-direction: row;
@@ -87,18 +70,15 @@ a{
     text-align: center ;
     height: auto;
     padding:5px;
-	border-radius:10px;
-	margin: 12px;;
+    border-radius:10px;
+    margin: 12px;;
     color: #162723;
-
 }
-
 div.buttons{
     margin: 12px;
     display: flex;
     justify-content: center;
 }
-
 .btn {
     margin: 3px;
 }
@@ -117,15 +97,12 @@ div.buttons{
     border-radius:  15px 15px 15px 15px;
     font-size: 0.2rem;
 } 
-
 .card-body {
     max-width: 100%;
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 2fr;
     color:#162723;
-    
 }
-
 @media (min-width:768px){
     .list{
         width:60%
@@ -156,7 +133,7 @@ div.buttons{
 .arrivalTime {
     margin-top: 60px;
     grid-column: 2;
-    grid-row: 1;  
+    grid-row: 1;
 }
 .originCity {
     margin-top: 20px;
@@ -166,7 +143,7 @@ div.buttons{
 }
 .destinationCity {
     grid-column: 3;
-    grid-row: 1; 
+    grid-row: 1;
     margin-left: 20px;
     margin-top: 60px;
 }
@@ -177,7 +154,6 @@ div.buttons{
     text-transform:uppercase;
     font-weight: bold;
 }
-
 form.formActionsHome{
     margin-top: 0;
     width: 100%;
@@ -185,13 +161,11 @@ form.formActionsHome{
     display: flex;
     justify-content: space-between;
 }
-
 div.adminButtons{
     display: flex;
     justify-content: flex-end;
     width: 60%;
 }
-
 .deleteButton {
     color: transparent!important;
     letter-spacing: normal;
@@ -212,13 +186,11 @@ div.adminButtons{
     border-color: transparent!important;
     border-image: initial;
 }
-
 div.bookingButtons{
     display: flex;
     justify-self: flex-end;
     align-self:flex-end;
 }
-
 .buttonHome {
     font-size: 12px !important;
     background: #E0A458;
@@ -229,16 +201,13 @@ div.bookingButtons{
     border-radius: 10px;
     margin: 3px;
 }
-
 p.small.text-muted {
     --bs-text-opacity: 1;
     color: #E0A458 !important;
 }
-
 a.page-link{
     color: #162723 !important;;
 }
-
 ul.pagination {
     --bs-pagination-bg: #E0A458;
     --bs-pagination-color: var(--bs-link-color);
@@ -246,15 +215,15 @@ ul.pagination {
     --bs-pagination-border-color: #162723;
     --bs-pagination-border-radius: 0.375rem;
     --bs-pagination-hover-color: var(--bs-link-hover-color);
-    --bs-pagination-hover-bg: #e9ecef;
-    --bs-pagination-hover-border-color: #dee2e6;
+    --bs-pagination-hover-bg: #E9ECEF;
+    --bs-pagination-hover-border-color: #DEE2E6;
     --bs-pagination-focus-color: var(--bs-link-hover-color);
-    --bs-pagination-focus-bg: #e9ecef;
+    --bs-pagination-focus-bg: #E9ECEF;
     --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
     --bs-pagination-active-color: #162723;
     --bs-pagination-active-bg: #8C9E88;
     --bs-pagination-active-border-color: #162723;
-    --bs-pagination-disabled-color: #6c757d;
+    --bs-pagination-disabled-color: #6C757D;
     --bs-pagination-disabled-bg: #E0A458;
     --bs-pagination-disabled-border-color: #162723;
 }
