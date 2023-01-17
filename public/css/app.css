@@ -236,6 +236,40 @@ div.bookingButtons{
     justify-self: flex-end;
     align-self:flex-end;
 }
+
+
+.buttonHome, .bookBtn {
+    font-size: 12px !important;
+    background-color: #E0A458;
+    color: #162723;
+    width: 60px;
+    height: 25px;
+    border-color: #E0A458 ;
+    border-radius: 10px;
+    margin: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.73);
+}
+
+.unbookedBtn {
+    font-size: 12px !important;
+    background-color: #E0A458;
+    color: #162723;
+    width: 85px;
+    height: 25px;
+    border-color: #E0A458 ;
+    border-radius: 10px;
+    margin: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.73);
+}
+
+button#bookBtn.bookBtn{
+    width: 85px;
+}
+
 .buttonHome {
     font-size: 12px !important;
     background: #E0A458;
@@ -271,4 +305,10 @@ ul.pagination {
     --bs-pagination-disabled-color: #6C757D;
     --bs-pagination-disabled-bg: #E0A458;
     --bs-pagination-disabled-border-color: #162723;
+}
+
+div.d-none.flex-sm-fill.d-sm-flex.align-items-sm-center.justify-content-sm-between {
+    display: flex;
+    flex-direction: column;
+
 }
