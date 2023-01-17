@@ -28,13 +28,7 @@
     </button>
 </div> 
 
-<!-- <div>
-    @if (Auth::check() && Auth::user()->isAdmin)
-        <button class="buttonHome" style="color: white">
-        <a href="{{route('createTrip')}}">Create New Trip</a>
-        </button>
-    @endif
-</div> -->
+
 
 <div class="list" >
     @foreach ($trips as $trip)
@@ -62,21 +56,13 @@
                 </div>
                 @endif
 
-                <!-- <div class="bookingButtons">
-                    @if ($trip->date_time > now())
-                        @if ($trip->ifBooked === "1")
-                            <button class="buttonHome"><a href="{{route('unbooking',$trip->id)}}">Unbook</a></button>
-                        @else
-                            <button class="buttonHome"><a href="{{route('booking',$trip->id)}}">Book</a></button>
-                        @endif
-                    @endif
-                </div>-->
+                
 
                 <div class="bookingButtons">
-                    <!-- <button class="bookBtn" id="bookBtn"><a href="{{route('showTrip','user_count,'$trip->id)}}">Book</a></button> -->
+                    
                     <button class="bookBtn" id="bookBtn"><a href="{{route('showTrip', ['id'=>$trip->id, 'user_count'=>$trip->user_count, 'ifBooked'=>$trip->ifBooked])}}">Book</a></button>
 
-                    <!-- <button class="unbookedBtn" id="unbookBtn"><a href="{{route('unbooking',$trip->id)}}">Unbooked</a></button> -->
+
                 </div> 
             </form>  
 

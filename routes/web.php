@@ -34,3 +34,5 @@ Route::get('/show/{id}', [TripController::class, 'show'])->name('showTrip');
 
 Route::get('/booking/{id}', [TripController::class, 'booking'])->name('booking')->middleware('auth');
 Route::get('/unbooking/{id}', [TripController::class, 'unbooking'])->name('unbooking')->middleware('auth');
+
+Route::get('/myTripUser', [TripController::class,'myTripUser'])->name('myTripUser')->middleware('auth');

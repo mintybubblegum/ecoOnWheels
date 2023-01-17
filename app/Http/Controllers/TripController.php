@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
 
+
 class TripController extends Controller
 {
     /**
@@ -31,7 +32,7 @@ class TripController extends Controller
             } */
             
         $trips = Trip::totaluserInscript($trips);
-        /* $trips = Trip::ifSubscript($trips,$mytripuser); */
+        /* $trips = Trip::ifBooked($trips,$mytripuser); */
         
         /* return view('home', compact('trips', 'mytripuser')); */
     }
@@ -119,7 +120,7 @@ class TripController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id,  $user_count, $ifBooked=null)
     {
         $trip=Trip::find($id);
         $trip->user_count = $user_count;
@@ -187,4 +188,23 @@ class TripController extends Controller
 
         return redirect()->route('home');
     }
+
+    public function myTripsUser( $trips, $user_count, $ifBooked=null)
+    {
+        $myTripUser = [];    
+        if (Auth::user()){
+            $user=Auth::user();
+            $myTripUser = $user->trip;
+        }
+
+        $trips = Trip::totalUserBookings($trips);
+        $trips = Trip::ifBooked($trips,$myTripUser);
+        
+        return view('myTripUser', compact('trips', 'myTripUser'));
+
+
+}
+
+
+
 }

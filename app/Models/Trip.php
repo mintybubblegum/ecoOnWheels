@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+
 
 class Trip extends Model
 {
@@ -40,7 +42,8 @@ class Trip extends Model
         return $this->belongsToMany(User::class);	
     }
 
-    static function ifBooked ($trips, $myTripUser)
+
+    static function ifBooked($trips, $myTripUser)
     {
         foreach ($trips as $trip) {
             foreach ($myTripUser as $myTrip){
