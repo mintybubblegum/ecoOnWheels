@@ -73,14 +73,17 @@
                 </div>-->
 
                 <div class="bookingButtons">
-                    <button onclick="buttonColor()" class="bookBtn" id="bookBtn"><a href="{{route('booking',$trip->id)}}">Book</a></button>
-                    <button class="unbookedBtn" id="unbookBtn"><a href="{{route('unbooking',$trip->id)}}">Unbooked</a></button>
+                    <!-- <button class="bookBtn" id="bookBtn"><a href="{{route('showTrip','user_count,'$trip->id)}}">Book</a></button> -->
+                    <button class="bookBtn" id="bookBtn"><a href="{{route('showTrip', ['id'=>$trip->id, 'user_count'=>$trip->user_count, 'ifBooked'=>$trip->ifBooked])}}">Book</a></button>
+
+                    <!-- <button class="unbookedBtn" id="unbookBtn"><a href="{{route('unbooking',$trip->id)}}">Unbooked</a></button> -->
                 </div> 
             </form>  
 
     </section>
     
     @endforeach
+
 </div>
 <div>
     {!! $trips->links()!!}

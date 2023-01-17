@@ -33,9 +33,57 @@ class Trip extends Model
         'departureTime',
         'arrivalTime',
         'topJourneys',
+        'ifBooked',
     ];
     
     public function user(){
         return $this->belongsToMany(User::class);	
     }
+
+    static function ifBooked ($trips, $myTripUser)
+    {
+        foreach ($trips as $trip) {
+            foreach ($myTripUser as $myTrip){
+
+                if ($trip->id === $myTrip->id){
+                    $trip->ifBooked = "1";
+                }
+            }    
+        }
+        return ($trips);
+    }
+
+    static function totalUserBookings($trips)
+    {
+        $trips=Trip::withCount('user')->get();
+        
+        return ($trips);
+    }
+
+    static function checkTripAvailable($trip) {
+        
+        $usercount = Trip::totalUserBookings($trip);
+
+        foreach ($usercount as $reservation) {
+
+            if ($reservation->id === $trip->id) {                
+                $usercount = $reservation->user_count;
+                return $usercount;
+            }
+        }
+    }
+
+    static function checkBooking($user, $trip) {
+
+        foreach ($user->trip as $bookedTrip) {
+
+            if ($trip->id === $bookedTrip->id) {
+                $booked = true;
+                return $booked;
+            }
+        }
+    }
+
+
+
 }

@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Trip;
 use App\Models\User;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -17,12 +18,22 @@ class TripController extends Controller
      */
     public function index()
     {
-
         $sliders= Trip::where('topJourneys','1')->get();
+        $trips= Trip::Paginate(5)/* ->sortBy('date_time') */;
+        /* $pastTrips = Trip::all()
+            ->sortBy('date_time'); */
+        return view('home', compact('sliders','trips'));
 
-        $trips= Trip::Paginate(5);
-
-        return view('home', compact('sliders') ,compact('trips'));
+        /* $mytripuser = [];    
+            if (Auth::user()){
+                $user=Auth::user();
+                $mytripuser = $user->trip;
+            } */
+            
+        $trips = Trip::totaluserInscript($trips);
+        /* $trips = Trip::ifSubscript($trips,$mytripuser); */
+        
+        /* return view('home', compact('trips', 'mytripuser')); */
     }
 
     /**
@@ -111,6 +122,9 @@ class TripController extends Controller
     public function show($id)
     {
         $trip=Trip::find($id);
+        $trip->user_count = $user_count;
+        $trip->ifBooked = $ifBooked;
+
         return view('showTrip', compact('trip'));
     }
 
@@ -151,17 +165,20 @@ class TripController extends Controller
         Trip::destroy($id);
         return redirect()->route('home');
     }
-    public function booking($id){
+    public function booked($id){
 
         $trip = Trip::find($id);
         $user = User::find(Auth::id());
+        $usercount = Trip::checkTripAvailable($trip);
+        $booked = Trip::checkBooking($user, $trip);
 
-        $user->trip()->attach($trip);
-
+        if ($usercount < $trip->users_max && !$booked) {
+            $user->trip()->attach($trip);}
+    
         return redirect()->route('home');
     }
 
-    public function unbooking($id){
+    public function unbooked($id){
 
         $trip = Trip::find($id);
         $user = User::find(auth::id());
