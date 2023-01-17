@@ -8,12 +8,16 @@
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     align-items: baseline;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0px;
 }
 .homeIcon {
     justify-self: center;
     margin-top: 20px;
     margin-bottom: 20px; 
     margin-left: 10px;
+    grid-column: 1;
 } 
 
 .addIcon {
@@ -28,4 +32,5 @@
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 40px;
+    grid-column: 3;
 }

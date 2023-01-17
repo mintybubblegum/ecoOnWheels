@@ -1,4 +1,5 @@
 <footer class= "mainFooter">
+
     <div class="homeIcon">
         <a class="navbar-brand" href="{{ url('/') }}">
             <img src="../images/homeIcon.png" alt="homeIcon">
@@ -7,6 +8,7 @@
             </button>
         </a>
     </div>
+
     @if (Auth::check() && Auth::user()->isAdmin)
     <div class=addIcon>
         <button class="buttonHome" style="color: white">
@@ -14,7 +16,6 @@
         </button>
     </div>
     @endif
-
     <div class="suitcaseIcon">
         <a class="navbar-brand" href="{{ url('/') }}">
             <img src="../images/suitcaseIcon.png" alt="homeIcon">
@@ -22,6 +23,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
         </a>
+    </div>
 </footer> 
 
 </main>
