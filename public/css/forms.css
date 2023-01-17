@@ -192,7 +192,6 @@ div.buttons{
 }
 
 .invalidFeedback {
-    font-size: medium;
     font-weight: bolder;
-    color:whitesmoke;
+    color: darkred;
 }
