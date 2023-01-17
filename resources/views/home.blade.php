@@ -67,7 +67,6 @@
                 </div>  
             </form>  
         @endif 
-                   
     </section>
     
     @endforeach

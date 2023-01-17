@@ -7,11 +7,6 @@ use App\Models\Trip;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
-
-
-
-
-
 class TripController extends Controller
 {
     /**
@@ -24,9 +19,9 @@ class TripController extends Controller
 
         $sliders= Trip::where('topJourneys','1')->get();
 
-        $trips= Trip::Paginate(5);
+        $trips= Trip::orderBy('date')->paginate(5);
 
-        return view('home', compact('sliders') ,compact('trips'));
+        return view('home', compact('sliders', 'trips'));
     }
 
     /**
