@@ -9,7 +9,7 @@
         @foreach ($sliders as $key => $item)
             <div class="carousel-item {{ $key == 0 ? ' active' : ''}}">
                 @if ($item->imgDestination)
-                <img src="{{ asset("$item->imgDestination") }}" class="d-block w-100" alt="City destination picture">
+                <img src="{{ asset("$item->imgDestination") }}" class="d-block w-100 imgCarousel" alt="City destination picture">
                 @endif
                 <div class="carousel-caption d-none d-md-block">
                 <h5>{{$item->originCity}}->{{$item->destinationCity}}</h5>
@@ -42,6 +42,9 @@
         <div class="card-body" >
             <a href="{{route ('showTrip', $trip->id)}}">
             <img src="{{ $trip->imgDestination }}" class="imgCityDestination img-fluid h-100" alt="..."></a>
+            <div class="leafLineHome">
+                <img src="./images/leafLine.png" alt="Leaf Line">
+            </div>
             <h6 class="date"> {{ $trip->date }} </h6>
             <h6 class="departureTime"> {{ $trip->departureTime }} </h6>
             <h6 class="originCity"> {{ $trip->originCity }}</h6>
@@ -57,6 +60,7 @@
                 @csrf
                 <div class="adminButtons">
                     <a href="{{route ('editTrip',['id'=>$trip->id])}}">
+                        <img src="../images/starEmpty.png" alt="star empty">
                         <img src="../images/editPencil.png" alt="Pencil button">
                     </a>
                     <button type="submit" onclick="return confirm ('Are you sure you want to delete this trip to {{ $trip->destinationCity }}?')" class="deleteButton"><img src="../images/deleteBin.png" alt="Bin button"></button>
