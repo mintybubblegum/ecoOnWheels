@@ -48,7 +48,7 @@
             <h6 class="originCity"> {{ $trip->originCity }}</h6>
             <h6 class="arrivalTime"> {{ $trip->arrivalTime }}</h6>
             <h6 class="destinationCity"> {{ $trip->destinationCity }} </h6>
-            <h6 class="price col-9"> {{ $trip->price }} € </h6>
+            <h6 class="price col-9"> {{ $trip->price }}€ </h6>
             <h6 class="energyType"> {{ $trip->energyType }} </h6>
         </div>
         
