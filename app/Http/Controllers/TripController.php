@@ -18,8 +18,7 @@ class TripController extends Controller
     {
 
         $sliders= Trip::where('topJourneys','1')->get();
-
-        $trips= Trip::orderBy('date')->paginate(5);
+        $trips= Trip::orderBy('date', 'desc')->paginate(5);
 
         return view('home', compact('sliders', 'trips'));
     }
