@@ -126,11 +126,9 @@ div.card-body {
         width: 300px;
         height: 350px;
     }
-
     section.cardHome{
         max-width: 475px;
     }
-
     div.card-body {
         max-width: 450px;
         max-height: 205px;
