@@ -76,6 +76,7 @@
         @endif
 
 
+        
         @if ($trip->date < now())
             <section class="cardHomePast">
                 <div class="card-body" >
