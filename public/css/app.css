@@ -100,6 +100,15 @@ div.buttons{
     border-radius:  15px 15px 15px 15px;
     font-size: 0.2rem;
 } 
+.cardHomePast {
+    margin:15px;
+    max-width: 120rem;
+    width: 100%;
+    justify-content: center;
+    background-color: rgba(140,158,136, 0.4);
+    border-radius:  15px 15px 15px 15px;
+    font-size: 0.2rem;
+}
 div.card-body {
     max-width: 100%;
     display: grid;
