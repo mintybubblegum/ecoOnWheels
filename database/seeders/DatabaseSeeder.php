@@ -165,7 +165,7 @@ class DatabaseSeeder extends Seeder
             'energyType' => 'Hybrid Car',
             'numberplate'=> '8367LGM',
             'vehicleType'=> 'Toyota Yaris',
-            'date' => '2023-01-05',
+            'date' => '2023-02-02',
             'departureTime' => '09:00',
             'arrivalTime' => '10:20',
             'topJourneys'=> 1,
