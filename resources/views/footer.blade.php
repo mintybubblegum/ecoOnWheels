@@ -9,8 +9,8 @@
     </div>
     @if (Auth::check() && Auth::user()->isAdmin)
     <div class=addIcon>
-        <button class="buttonHome" style="color: white">
-        <a href="{{route('createTrip')}}">+</a>
+        <button class="plusIcon">
+        <a href="{{route('createTrip')}}"><img src="../images/plusIcon1.png" alt="Plus Icon"></a>
         </button>
     </div>
     @endif
