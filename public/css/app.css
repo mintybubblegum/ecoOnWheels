@@ -48,7 +48,6 @@ a{
     margin:auto;
     color: #162723;
 }
-
 div.carousel-caption.d-none.d-md-block {
     position: absolute;
     right: 15%;
@@ -310,7 +309,6 @@ ul.pagination {
     --bs-pagination-disabled-bg: #E0A458;
     --bs-pagination-disabled-border-color: #162723;
 }
-
 div.d-none.flex-sm-fill.d-sm-flex.align-items-sm-center.justify-content-sm-between {
     display: flex;
     flex-direction: column;
