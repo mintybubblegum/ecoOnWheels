@@ -101,12 +101,13 @@ To run the tests, execute the following command(s)
 ```bash
   php artisan test
 ```
-<img width="315" alt="Screenshot_1" src="https://user-images.githubusercontent.com/98114939/210546159-51336ec9-c421-4ed8-8380-90b99126ca65.png">
+<img width="259" alt="Screenshot test" src="https://user-images.githubusercontent.com/98114939/213283029-289028e1-0b25-445c-823d-eb97f476d4e6.png">
 
 ```bash
   vendor/bin/phpunit tests
 ```
-<img width="307" alt="Screenshot_3" src="https://user-images.githubusercontent.com/98114939/210546675-182f9f5b-b127-4e65-b476-7dd19af730f4.png">
+
+<img width="370" alt="Screenshot test" src="https://user-images.githubusercontent.com/98114939/213283195-6b66fa87-9893-4681-9ee5-42ae2105b08b.png">
 
 ***
 
@@ -117,13 +118,11 @@ To run the tests, execute the following command(s)
 ***
 
 ## Next Steps
-- Add carousel of featured trips
 - Establish pagination order
-- Implement user management and roles associated with each role
-- Display unavailable past trips
+- Implement trip management in the user's profile
+- Display unavailable trips by occupancy
 - Send confirmation email of booked trips
-- Adjust CSS styles
 - Dropdown of destination images
 - Checkbox in preferences
-- Radio button to add trip to slider
-- Validate forms with regular expressions
+- Star button functionality to add trip to slider
+- Toogle button "booking" and "unbooking"
