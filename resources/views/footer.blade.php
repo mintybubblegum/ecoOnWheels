@@ -12,7 +12,7 @@
     @if (Auth::check() && Auth::user()->isAdmin)
     <div class=addIcon>
         <button class="buttonHome" style="color: white">
-        <a href="{{route('createTrip')}}">+</a>
+        <a href="{{route('createTrip')}}"></a>
         </button>
     </div>
     @endif
