@@ -16,7 +16,7 @@ a.nav-link {
     color: #E0A458!important;
 }
 div#carouselExampleCaptions.carousel.slide {
-    width: 50vw;
+    width: 80%;
     display: flex;
     justify-content: center;
 }
@@ -48,6 +48,22 @@ a{
     margin:auto;
     color: #162723;
 }
+div.carousel-caption.d-none.d-md-block {
+    position: absolute;
+    right: 15%;
+    bottom: 0.1rem;
+    left: 15%;
+    padding-top: 0.15rem;
+    padding-bottom: 0.10rem;
+    color: #fff;
+    text-align: center;
+    font-weight:bolder;
+}
+img.d-block.w-100.imgCarousel {
+    width: 300px;
+    height: 200px;
+    
+}
 .card{
     margin:5px;
     background-color: #8C9E88;
@@ -60,19 +76,6 @@ a{
 }
 .formActions{
     background-color: transparent;
-}
-.containerTitle{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: #E0A458;
-    width: 80%;
-    text-align: center ;
-    height: auto;
-    padding:5px;
-    border-radius:10px;
-    margin: 12px;;
-    color: #162723;
 }
 div.buttons{
     margin: 12px;
@@ -97,15 +100,44 @@ div.buttons{
     border-radius:  15px 15px 15px 15px;
     font-size: 0.2rem;
 } 
-.card-body {
+div.card-body {
     max-width: 100%;
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr 2fr;
+    grid-template-columns: 2fr 50px .5fr 1fr 50px;
+    grid-template-rows: .8fr 30px;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
     color:#162723;
 }
 @media (min-width:768px){
     .list{
         width:60%
+    }
+
+    div#carouselExampleCaptions.carousel.slide {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        
+    
+    } 
+    img.d-block.w-100 {
+        margin: 10px;
+        width: 300px;
+        height: 350px;
+    }
+    section.cardHome{
+        max-width: 475px;
+    }
+    div.card-body {
+        max-width: 450px;
+        max-height: 205px;
+        display: grid;
+        grid-template-columns: 2fr .5fr 50px 1fr 50px;
+        grid-template-rows: .8fr 30px;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        color:#162723;
     }
 }
 .imgCityDestination {
@@ -113,44 +145,56 @@ div.buttons{
     grid-column: 1;
 }
 .date {
+    text-align: center;
     margin-left:7px ;
     margin-top: 5px;
     color:#162723;
     grid-column: 1;
-    grid-row: 3/4;
+    grid-row: 2/3;
+    font-weight: bold;
 }
 .price {
-    grid-column: 4;
+    grid-column: 5;
     grid-row: 1;
-    margin-left: 30px;
+    margin-left: 10px;
     margin-top: 60px;
 }
-.departureTime {
+
+div.leafLineHome{
+    margin-top:20px ;
+    margin-left: 5px;
+    padding-left: 5px;
+    grid-column: 3;
+    grid-row: 1;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+h6.departureTime {
     margin-top:20px ;
     grid-column: 2;
     grid-row: 1;
 }
-.arrivalTime {
-    margin-top: 60px;
+h6.arrivalTime {
+    margin-top: 110px;
     grid-column: 2;
-    grid-row: 1;
+    grid-row: 1;  
 }
-.originCity {
+h6.originCity {
     margin-top: 20px;
-    grid-column: 3;
+    grid-column: 4;
     grid-row: 1;
-    margin-left: 20px;
+    
 }
-.destinationCity {
-    grid-column: 3;
-    grid-row: 1;
-    margin-left: 20px;
-    margin-top: 60px;
+h6.destinationCity {
+    grid-column: 4;
+    grid-row: 1; 
+    margin-top: 110px;
 }
-.energyType {
+h6.energyType {
     margin-top:5px ;
-    grid-column: 2/4;
-    grid-row: 3;
+    grid-column: 3/5;
+    grid-row: 2;
     text-transform:uppercase;
     font-weight: bold;
 }
@@ -159,7 +203,7 @@ form.formActionsHome{
     width: 100%;
     background-color: transparent;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 div.adminButtons{
     display: flex;
@@ -181,6 +225,7 @@ div.adminButtons{
     box-sizing:unset;
     background-color: transparent!important;
     margin: 0em;
+    margin-right: 5px;
     padding: 1px 8px 0 8px;
     border-width: 0px;
     border-color: transparent!important;
@@ -191,6 +236,40 @@ div.bookingButtons{
     justify-self: flex-end;
     align-self:flex-end;
 }
+
+
+.buttonHome, .bookBtn {
+    font-size: 12px !important;
+    background-color: #E0A458;
+    color: #162723;
+    width: 60px;
+    height: 25px;
+    border-color: #E0A458 ;
+    border-radius: 10px;
+    margin: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.73);
+}
+
+.unbookedBtn {
+    font-size: 12px !important;
+    background-color: #E0A458;
+    color: #162723;
+    width: 85px;
+    height: 25px;
+    border-color: #E0A458 ;
+    border-radius: 10px;
+    margin: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.73);
+}
+
+button#bookBtn.bookBtn{
+    width: 85px;
+}
+
 .buttonHome {
     font-size: 12px !important;
     background: #E0A458;
@@ -226,4 +305,14 @@ ul.pagination {
     --bs-pagination-disabled-color: #6C757D;
     --bs-pagination-disabled-bg: #E0A458;
     --bs-pagination-disabled-border-color: #162723;
+}
+div.d-none.flex-sm-fill.d-sm-flex.align-items-sm-center.justify-content-sm-between {
+    display: flex;
+    flex-direction: column;
+
+}
+
+button.plusIcon {
+    background-color: transparent;
+    border-color: transparent!important;
 }

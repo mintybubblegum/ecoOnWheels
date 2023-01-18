@@ -2,6 +2,7 @@
 
 @section('content')
     
+<section class="showPage">
     <img class="imgDestinationShow" src="{{$trip->imgDestination}}" alt="Destination Image">
     <div class="boxDestinationShow">
         <h4 class=dateShow >{{$trip->date}}</h4>
@@ -62,5 +63,5 @@
     </div>
             
     <button type="button" class=buttonReserveShow><a href="{{route ('booking', $trip->id)}}" class=buttonReserveShow>Reserve my seat</a></button>
-        
+</section>
 @endsection
