@@ -28,14 +28,6 @@
     </button>
 </div> 
 
-<!-- <div>
-    @if (Auth::check() && Auth::user()->isAdmin)
-        <button class="buttonHome" style="color: white">
-        <a href="{{route('createTrip')}}">Create New Trip</a>
-        </button>
-    @endif
-</div> -->
-
 <div class="list" >
     @foreach ($trips as $trip)
     <section class="cardHome">
@@ -54,7 +46,7 @@
             <h6 class="energyType"> {{ $trip->energyType }} </h6>
         </div>
         
-            <form class=formActionsHome action="{{ route('deleteTrip', ['id'=>$trip->id]) }}" method="POST">
+            <form class="formActionsHome" action="{{ route('deleteTrip', ['id'=>$trip->id]) }}" method="POST">
                 @if (Auth::check() && Auth::user()->isAdmin)
                 @method('delete')
                 @csrf
@@ -67,8 +59,14 @@
                 </div>
                 @endif 
                 <div class="bookingButtons">
-                    <button class="bookBtn" id="bookBtn"><a href="{{route('booking',$trip->id)}}">Booking</a></button>
-                    <button class="bookBtn" id="bookBtn"><a href="{{route('unbooking',$trip->id)}}">Unbooking</a></button>
+                    <button class="bookBtn" id="bookBtn">
+                        <a href="{{route('booking',$trip->id)}}">Booking</a>
+                    </button>
+                    
+                    <a class="seeMoreBtn" href="{{route('showTrip',$trip->id)}}">
+                        <img src="../images/seeMoreBtn.png" class="seeMoreImg" alt="See trip details">
+                    </a>
+                    
                 </div>  
             </form>  
     </section>

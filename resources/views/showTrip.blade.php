@@ -63,5 +63,6 @@
     </div>
             
     <button type="button" class=buttonReserveShow><a href="{{route ('booking', $trip->id)}}" class=buttonReserveShow>Reserve my seat</a></button>
+    <button class="buttonReserveShow" id="bookBtn"><a href="{{route('unbooking',$trip->id)}}">Unbooking</a></button>
 </section>
 @endsection

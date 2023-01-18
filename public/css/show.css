@@ -155,7 +155,7 @@
 .imgDriverShow {
     width: 20%;
     border-radius: 15px;
-}
+} 
 
 .preferencesShow {
     background-color: #8C9E88;
@@ -171,10 +171,10 @@
     font-size: medium;
 }
 
-button.buttonReserveShow {
+button.buttonReserveShow{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center !important;
     text-decoration: none !important;
     font-size: medium;
     background: #E0A458;
@@ -183,12 +183,16 @@ button.buttonReserveShow {
     height: auto;
     border-color: #E0A458;
     border-radius: 10px;
-    margin: 3px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.73);
+    margin-left: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
 } 
+
 
 
 @media (min-width:768px){
     section.showPage{
         width: 40%;
     }
- }
+}

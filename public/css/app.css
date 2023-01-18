@@ -237,8 +237,39 @@ div.bookingButtons{
     align-self:flex-end;
 }
 
+.seeMoreBtn {
+    font-size: 12px !important;
+    background-color: #E0A458;
+    color: #162723;
+    width: 40px;
+    height: 25px;
+    border-color: #E0A458 ;
+    border-radius: 10px;
+    margin: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.73);
+}
+
+.seeMoreImg{
+    padding: 5px 0px 0px 10px;
+}
 
 .buttonHome, .bookBtn {
+    font-size: 12px !important;
+    background-color: #E0A458;
+    color: #162723;
+    width: 60px;
+    height: 25px;
+    border-color: #E0A458 ;
+    border-radius: 10px;
+    margin: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.73);
+}
+
+.bookBtn::before {
     font-size: 12px !important;
     background-color: #E0A458;
     color: #162723;
