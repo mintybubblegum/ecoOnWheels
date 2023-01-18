@@ -38,7 +38,7 @@
 
 <div class="list" >
     @foreach ($trips as $trip)
-    @if($trip->date>now())
+    @if($trip->date>now()) 
         <section class="cardHome">
             <div class="card-body" >
                 <a href="{{route ('showTrip', $trip->id)}}">
@@ -73,10 +73,10 @@
                     </div>  
                 </form>  
         </section>
-    @endif
+    @endif 
     @endforeach
 
-
+    @foreach ($trips as $trip)
     @if($trip->date<now())
             <section class="cardHomePast">
                 <div class="card-body" >
@@ -105,6 +105,7 @@
                     </form>  
             </section>
         @endif
+        @endforeach  
         </div>
 <div>
     {!! $trips->links()!!} 
