@@ -39,6 +39,8 @@ return new class extends Migration
             $table->time('departureTime');
             $table->time('arrivalTime');
             $table->boolean('topJourneys')->nullable()->default(0);
+            $table->boolean('ifBooked')->nullable();
+            $table->integer('totalBooking')->nullable();
             
             $table->timestamps();
         });

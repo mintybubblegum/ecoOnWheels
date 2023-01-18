@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Trip;
 use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
- 
+
 class TripController extends Controller
 {
     /**
@@ -18,10 +19,19 @@ class TripController extends Controller
     {
 
         $sliders= Trip::where('topJourneys','1')->get();
-        $trips= Trip::orderBy('date', 'desc')->paginate(5);
-
         
-        return view('home', compact('sliders', 'trips'));
+        
+        $mytripuser = [];    
+        if (Auth::user()){
+            $user=Auth::user();
+            $mytripuser = $user->trip;
+        }
+
+        $trips= Trip::orderBy('date', 'desc')->paginate(5);
+        $trips = Trip::totaluserBookings($trips);
+        $trips = Trip::ifBook($trips, $mytripuser);
+        
+        return view('home', compact('sliders', 'trips', 'mytripuser'));
     }
 
     /**
@@ -66,6 +76,8 @@ class TripController extends Controller
             'departureTime' => 'required',
             'arrivalTime' => 'required',
             'topJourneys' => 'nullable',
+            'ifBooked' => 'nullable',
+            'totalBookings' => 'nullable',
         ]);
         
         $trip = new Trip;
@@ -92,6 +104,8 @@ class TripController extends Controller
         $trip->departureTime = $request->departureTime;
         $trip->arrivalTime = $request->arrivalTime;
         $trip->topJourneys = $request->topJourneys;
+        $trip->ifBooked = $request->ifBooked;
+        $trip->totalBookings = $request->totalBookings;
 
         $trip->save();
 
@@ -107,9 +121,12 @@ class TripController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id, $user_count, $ifBooked=null)
     {
         $trip=Trip::find($id);
+        $trip->user_count = $user_count;
+        $trip->ifBooked = $ifBooked;
+
         return view('showTrip', compact('trip'));
     }
 
@@ -150,13 +167,18 @@ class TripController extends Controller
         Trip::destroy($id);
         return redirect()->route('home');
     }
-    public function booking($id){
-
-        $trip = Trip::find($id);
+    
+    public function booking($id)
+    {
         $user = User::find(Auth::id());
+        $trip = Trip::find($id);
+        $usercount = Trip::checkSeatsFree($trip);
+        $booked = Trip::checkBookings($user, $trip);
 
-        $user->trip()->attach($trip);
-
+        if ($usercount < $trip->seats && !$booked) {
+            $user->trip()->attach($trip);
+        }
+    
         return redirect()->route('home');
     }
 

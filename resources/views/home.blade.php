@@ -74,7 +74,7 @@
     @endforeach
 </div>
 <div>
-    {!! $trips->links()!!} 
-</div>
+{{--     {!! $trips->links()!!}
+ --}}</div>
 
 @endsection

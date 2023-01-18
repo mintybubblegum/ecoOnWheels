@@ -61,8 +61,12 @@
             <p class="vehicleTypeShow">{{$trip->vehicleType}}</p>
         </h4>
     </div>
-            
-    <button type="button" class=buttonReserveShow><a href="{{route ('booking', $trip->id)}}" class=buttonReserveShow>Reserve my seat</a></button>
-    <button class="buttonReserveShow" id="bookBtn"><a href="{{route('unbooking',$trip->id)}}">Unbooking</a></button>
+    @if ($trip->date > now())
+        @if ($trip->ifBooked === "1")
+            <button class="buttonReserveShow" id="bookBtn"><a href="{{route('unbooking',$trip->id)}}">Unbooking</a></button>
+        @else
+            <button type="button" class=buttonReserveShow><a href="{{route ('booking', $trip->id)}}" class=buttonReserveShow>Reserve my seat</a></button>
+        @endif
+    @endif        
 </section>
 @endsection
