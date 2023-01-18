@@ -138,6 +138,11 @@ div.card-body {
     section.cardHome{
         max-width: 475px;
     }
+
+    section.cardHomePast{
+        max-width: 475px;
+    }
+
     div.card-body {
         max-width: 450px;
         max-height: 205px;
