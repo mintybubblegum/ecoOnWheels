@@ -68,8 +68,7 @@
                     </div>
                     @endif 
                     <div class="bookingButtons">
-                        <button class="bookBtn" id="bookBtn"><a href="{{route('booking',$trip->id)}}">Booking</a></button>
-                        <button class="bookBtn" id="bookBtn"><a href="{{route('unbooking',$trip->id)}}">Unbooking</a></button>
+                        <button class="bookBtn" id="bookBtn"><a href="{{route('showTrip',$trip->id)}}">Booking</a></button>
                     </div>  
                 </form>  
         </section>

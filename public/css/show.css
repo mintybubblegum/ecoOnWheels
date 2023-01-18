@@ -183,12 +183,14 @@ button.buttonReserveShow {
     height: auto;
     border-color: #E0A458;
     border-radius: 10px;
-    margin: 3px;
+    margin-left: 10px;
+    margin-bottom: 2%;
+    text-transform: uppercase;
+    font-weight: bold;
 } 
-
 
 @media (min-width:768px){
     section.showPage{
         width: 40%;
     }
- }
+}
