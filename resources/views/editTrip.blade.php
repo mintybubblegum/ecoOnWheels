@@ -104,8 +104,7 @@
         <h3>Others details</h3>
         <div>
             <label class="form-label">Top Journeys</label>
-            <input type="checkbox" name="topJourneys" value="{{$trip->topJourneys}}" @if(value="{{$trip->topJourneys}} == 1 ? 'checked' : '' }} @endif>
-            
+            <input value="{{$trip->topJourneys}}" type="text" class="formControl" name="topJourneys">
         </div>
         <div class="buttons">
             <button type="reset" value="reset" class="btn resetButton">Reset</button>
