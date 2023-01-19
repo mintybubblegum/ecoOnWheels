@@ -170,3 +170,4 @@ class TripController extends Controller
         return redirect()->route('home');
     }
 }
+ 
