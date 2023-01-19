@@ -104,8 +104,7 @@
         <h3>Others details</h3>
         <div>
             <label class="form-label">Top Journeys</label>
-            <input  value="{{$trip->topJourneys}}" type="text" class="formControl" name="topJourneys">
-            
+            <input value="{{$trip->topJourneys}}" type="text" class="formControl" name="topJourneys">
         </div>
         <div class="buttons">
             <button type="reset" value="reset" class="btn resetButton">Reset</button>
