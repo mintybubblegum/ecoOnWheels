@@ -160,7 +160,7 @@ class TripController extends Controller
         $user->trip()->attach($trip);
 
         return redirect()->route('home');
-    }
+    } 
 
     public function unbooking($id){
 
