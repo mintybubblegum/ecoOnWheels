@@ -4,38 +4,6 @@
 
 @section('content')
 
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        @foreach ($sliders as $key => $item)
-            <div class="carousel-item {{ $key == 0 ? ' active' : ''}}">
-                @if ($item->imgDestination)
-                <img src="{{ asset("$item->imgDestination") }}" class="d-block w-100 imgCarousel" alt="City destination picture">
-                @endif
-                <div class="carousel-caption d-none d-md-block">
-                <h5>{{$item->originCity}}->{{$item->destinationCity}}</h5>
-                <p>{{$item->date}}</p>
-                </div>
-            </div>
-        @endforeach
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span> 
-    </button>
-</div> 
-
-<!-- <div>
-    @if (Auth::check() && Auth::user()->isAdmin)
-        <button class="buttonHome" style="color: white">
-        <a href="{{route('createTrip')}}">Create New Trip</a>
-        </button>
-    @endif
-</div> -->
-
 <div class="list" >
     @foreach ($trips as $trip)
         @if ($trip->date > now())
@@ -68,7 +36,8 @@
                     </div>
                     @endif 
                     <div class="bookingButtons">
-                        <button class="bookBtn" id="bookBtn"><a href="{{route('showTrip',$trip->id)}}">Booking</a></button>
+                        <button class="bookBtn" id="bookBtn"><a href="{{route('booking',$trip->id)}}">Booking</a></button>
+                        <button class="bookBtn" id="bookBtn"><a href="{{route('unbooking',$trip->id)}}">Unbooking</a></button>
                     </div>  
                 </form>  
         </section>

@@ -62,7 +62,7 @@ class DatabaseSeeder extends Seeder
             'energyType' => 'Flying Car',
             'numberplate'=> '5481MLK',
             'vehicleType'=> 'Citroen C5',
-            'date' => '2023-01-19',
+            'date' => '2023-01-18',
             'departureTime' => '09:00',
             'arrivalTime' => '12:40',
             'topJourneys'=>1,
@@ -165,10 +165,62 @@ class DatabaseSeeder extends Seeder
             'energyType' => 'Hybrid Car',
             'numberplate'=> '8367LGM',
             'vehicleType'=> 'Toyota Yaris',
-            'date' => '2023-02-02',
+            'date' => '2023-01-25',
             'departureTime' => '09:00',
             'arrivalTime' => '10:20',
             'topJourneys'=> 1,
+        ]);
+
+        Trip::factory()->create([
+            'imgDestination' => 'https://www.ahoracordoba.es/wp-content/uploads/2021/11/Cordoba-1.jpg',
+            'originAddress' => 'C/ Isaac Albéniz, 2',
+            'originPostcode' => '23009',
+            'originCity' => 'Jaen',
+            'originCountry' => 'Spain',
+            'destinationAddress' => 'Gta. Tres Culturas',
+            'destinationPostcode' => '14011',
+            'destinationCity' => 'Cordoba',
+            'destinationCountry' => 'Spain',
+            'preferences' => 'FemCoders-Friendly',
+            'seats' => '4',
+            'price' => '20.00',
+            'driverName'=> 'Lola',
+            'driverSurname'=> 'García',
+            'driverPhone'=> '633245897',
+            'driverImg'=> 'https://st2.depositphotos.com/1006318/5909/v/950/depositphotos_59094623-stock-illustration-female-avatar-woman.jpg',
+            'energyType' => 'Hybrid Car',
+            'numberplate'=> '8367LGM',
+            'vehicleType'=> 'Toyota Yaris',
+            'date' => '2023-01-02',
+            'departureTime' => '09:00',
+            'arrivalTime' => '10:20',
+            'topJourneys'=> 1,
+        ]);
+
+        Trip::factory()->create([
+            'imgDestination' => 'https://content.r9cdn.net/rimg/dimg/3b/c2/b4c4bfb9-city-27138-55689ae0.jpg?width=1366&height=768&xhint=1902&yhint=1090&crop=true',
+            'originAddress' => 'Estacion Maria Zambrano',
+            'originPostcode' => '29001',
+            'originCity' => 'Malaga',
+            'originCountry' => 'Spain',
+            'destinationAddress' => 'Av Juan Pablo II,45',
+            'destinationPostcode' => '18014',
+            'destinationCity' => 'Granada',
+            'destinationCountry' => 'Spain',
+            'preferences' => 'No smokers',
+            'seats' => '4',
+            'price' => '35.00',
+            'driverName'=> 'Himo',
+            'driverSurname'=> 'Jaramillo',
+            'driverPhone'=> '650248595',
+            'driverImg'=> 'https://st2.depositphotos.com/2703645/11476/v/950/depositphotos_114764242-stock-illustration-woman-avatar-character.jpg',
+            'energyType' => 'Hybrid Car',
+            'numberplate'=> '4874KLV',
+            'vehicleType'=> 'Mercedes Vito',
+            'date' => '2023-01-14',
+            'departureTime' => '14:00',
+            'arrivalTime' => '15:35',
+            'topJourneys'=>0,
         ]);
 
 /*         Trip::factory()->create();
@@ -185,7 +237,7 @@ class DatabaseSeeder extends Seeder
             'isAdmin' => false,
         ]); 
 
-        User::factory(5)->create();
+/*         User::factory(5)->create();
 
         User::factory()
             ->has(Trip::factory()->count(5))
@@ -193,7 +245,7 @@ class DatabaseSeeder extends Seeder
 
         Trip::factory()
             ->has(User::factory()->count(5))
-            ->create();
+            ->create(); */
         
         // \App\Models\User::factory(10)->create();
 
