@@ -150,6 +150,8 @@ class TripController extends Controller
         Trip::destroy($id);
         return redirect()->route('home');
     }
+
+    
     public function booking($id){
 
         $trip = Trip::find($id);
