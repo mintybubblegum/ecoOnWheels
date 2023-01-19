@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title','EcoOnWheels')
 @section('content')
     
 <section class="showPage">
