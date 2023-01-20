@@ -89,7 +89,7 @@ You will need a text editor and perform the following steps:
   php artisan serve
 ```
 
-8. Import database
+8. Migrate database
 ```bash
   php artisan migrate:fresh --seed
 ```
