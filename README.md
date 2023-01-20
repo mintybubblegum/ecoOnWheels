@@ -59,7 +59,7 @@ You will need a text editor and perform the following steps:
 
 1. Clone the project
 ```bash
-  git clone https://https://github.com/mintybubblegum/ecoOnWheels.git
+  git clone https://github.com/mintybubblegum/ecoOnWheels.git
 ```
 
 2. Go to the project directory
@@ -67,7 +67,7 @@ You will need a text editor and perform the following steps:
   cd ecoOnWheels
 ```
 
-3. Create a MySQL database named "ecoonwheels"
+3. Start MySQL service and create a MySQL database named "ecoonwheels"
 
 4. Create in the text editor an .env file by copying the contents of .env.example and modify the database name (laravel by ecoonwheels)
 
