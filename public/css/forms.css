@@ -1,3 +1,8 @@
+html{
+    height:1500px;
+    background-color: #162723;
+
+} 
 body {
     background-color: #162723;
     margin: 0;
@@ -11,6 +16,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .bgHeader {
@@ -170,7 +176,10 @@ div.buttons{
 
 .logoutTittle {
     color:#E0A458 !important;
+    text-align: center!important;
     padding-left: 0px !important;
+    background-color: rgba(140, 158, 136, 0.7) !important;
+    border-radius: 10px!important;
 }
 
 .loginForm, .registerForm {

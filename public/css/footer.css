@@ -8,8 +8,6 @@
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     align-items: baseline;
-    position: -webkit-sticky;
-    position: sticky;
     bottom: 0px;
 }
 .homeIcon {
@@ -33,4 +31,10 @@
     margin-bottom: 20px;
     margin-left: 40px;
     grid-column: 3;
+}
+
+@media(min-width: 600px){
+    .mainFooter{
+        display: none;
+    }
 }
